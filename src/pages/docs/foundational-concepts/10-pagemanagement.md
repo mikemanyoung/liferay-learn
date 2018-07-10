@@ -12,6 +12,8 @@ weight: 4
 
 ## Page Management
 
+<aside>
+
 ### <span class="icon-16-star"></span> Pro Tip
 
 The full documentation for these topics [can be found here](https://dev.liferay.com/discover/portal/-/knowledge_base/7-1/creating-and-managing-pages) 
