@@ -1,0 +1,69 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta content="minimum-scale=1.0, width=device-width" name="viewport"><meta name="description" content="Let's get started!"><title>Deploy - Liferay Learning</title><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto+Mono"><link rel="stylesheet" href="/vendor/galano/galano.css"><link rel="stylesheet" href="/vendor/icon-12/icon-12.css"><link rel="stylesheet" href="/vendor/icon-16/icon-16.css"><link rel="stylesheet" href="/vendor/senna/senna.css"><link rel="stylesheet" href="/vendor/codemirror/lib/codemirror.css"><link rel="stylesheet" href="/vendor/codemirror/theme/dracula.css"><script src="/js/bundles/shared.electric.js"></script><script src="/vendor/senna/senna.js"></script><script src="/vendor/codemirror/lib/codemirror.js"></script><script src="/vendor/codemirror/mode/clike/clike.js"></script><script src="/vendor/codemirror/mode/css/css.js"></script><script src="/vendor/codemirror/mode/groovy/groovy.js"></script><script src="/vendor/codemirror/mode/javascript/javascript.js"></script><script src="/vendor/codemirror/mode/shell/shell.js"></script><script src="/vendor/codemirror/mode/swift/swift.js"></script><script src="/vendor/codemirror/mode/xml/xml.js"></script><link rel="stylesheet" href="/styles/main.css"></head><body data-senna=""><div data-senna-surface="" id="wrapper"><div class="senna-loading-bar"></div><div id="pageComponent"><div class="main"><main class="guide"><div class="docs"><div class="container-hybrid"><div class="docs-guide row"><div class="docs-content col-xs-16 col-md-9"><div class="guide-content"><h6>Let's get started!</h6><article id="1"><h2>Deploy Multiple Implementations Of A Service</h2><p>Each API can have multiple service implementations. Let’s try it out to see how multiple service implementations interact in the OSGi runtime.</p><aside><h6><span class="icon-16-star"></span> Pro Tip</h6><p>If you run into problems, check out the video in the previous chapter for a step-by-step walkthrough of the entire exercise.</p></aside><h6>Your Task</h6><p>Create a new OSGi service that overrides the helloworld API.</p><div class="code-container"><button class="btn btn-sm btn-copy"><span class="icon-12-overlap"></span></button><pre><code class="code" data-mode="text/x-java" ref="code">package com.liferay.university.hello.uppercase.impl;
+
+import com.liferay.university.hello.api.HelloService;
+import org.osgi.service.component.annotations.Component;
+
+@Component(
+    immediate = true,
+    service = HelloService.class
+)
+public class HelloUppercaseServiceImpl implements HelloService {
+    @Override
+    public String hello(String parameter) {
+        return parameter.toUpperCase();
+    }
+}</code></pre></div><aside><h6><span class="icon-16-star"></span> Pro Tip</h6><p>Notice that we're using another package here <code>("com.liferay.university.hello.uppercase.impl")</code>. OSGi works best when every package is published by exactly one bundle.</p></aside></article><article id="2"><h2>Before Deployment</h2><p>Check that your command from the first exercise still works.</p><div class="code-container"><button class="btn btn-sm btn-copy"><span class="icon-12-overlap"></span></button><pre><code class="code" data-mode="text" ref="code">g! lb helloworld
+g! say hello
+hello</code></pre></div></article><article id="3"><h5>Deploy Your New Service Implementation</h5><p>Next, deploy your new service implementation. Now that you have two implementations for the helloworld API, what do you expect to be printed now?</p><div class="code-container"><button class="btn btn-sm btn-copy"><span class="icon-12-overlap"></span></button><pre><code class="code" data-mode="text" ref="code">hello or HELLO</code></pre></div></article><article id="4"><h2>Determining Service Implementation Priority</h2><p>OSGi has the choice to freely bind whatever it needs. The requirement to have a service is satisfied by either of the two implementations. As the service is already bound, there’s no need to rebind.</p><p><strong>Service Bundle ID</strong></p><p>In fact, one of OSGi’s strategies to determine which service has higher priority is the service bundle id - in this case the original implementation: A lower id has higher priority and will be preferred over a higher id.</p><p><strong>But Wait, There’s More</strong></p><p>You might have heard about another criterion, one that you can influence: It’s called service rank. By default, services have a rank of 0, and if you configure a higher rank, the higher ranked service is preferred.</p><p><strong>Note:</strong> For services with the same rank, the OSGi runtime will determine priority by id.</p></article><article id="5"><h2>Service Rank</h2><p>Let’s change our implementation and revalidate. Again: Think about your expectation. Make a mental or write it down.</p><div class="code-container"><button class="btn btn-sm btn-copy"><span class="icon-12-overlap"></span></button><pre><code class="code" data-mode="text/x-java" ref="code">@Component(
+    immediate = true,
+    property = {
+        "service.ranking:Integer=100"
+    },
+    service = HelloService.class
+)
+public class HelloUppercaseServiceImpl implements HelloService {
+    @Override
+    public String hello(String parameter) {
+        return parameter.toUpperCase();
+    }
+}</code></pre></div><p><strong>Note:</strong> Developer Studio can redeploy your service automatically.</p></article><article id="6"><h2>Check Gogo Shell</h2><div class="code-container"><button class="btn btn-sm btn-copy"><span class="icon-12-overlap"></span></button><pre><code class="code" data-mode="text" ref="code">g! lb helloworld
+START LEVEL 20
+   ID|State      |Level|Name
+  590|Active     |    1|helloworld-api (1.0.0)
+  591|Active     |    1|helloworld-service (1.0.0)
+  592|Active     |    1|helloworld-command (1.0.0)
+  593|Active     |    1|helloworld-capitalization-service (1.0.0)
+g! stop 592
+g! start 592
+g! say hello</code></pre></div><p>So, there we are: The higher ranking service has been bound when the command has been restarted - it was the highest service rank available when they were looked up.</p><p><strong>Learn By Experimenting</strong></p><p>Figure out what happens when you stop the highest ranking service, and start it again. Think about your expectations beforehand.</p></article><article id="7"><h2>Service References</h2><p><strong>Static Binding</strong></p><p>You’ve learned that the reference to services defaults to being static and will only be reconsidered upon restarting the dependent service - in our case the Gogo shell command.</p><p><strong>Dynamic Binding</strong></p><p>But what if you want to be more dynamic? This works as well, but you’ll need to let the runtime know that you’d like to get an updated service whenever a better one is available. Here’s an implementation for such a case.</p><div class="code-container"><button class="btn btn-sm btn-copy"><span class="icon-12-overlap"></span></button><pre><code class="code" data-mode="text/x-java" ref="code">@Component(
+immediate = true,
+    property = {
+        "osgi.command.function=say",
+        "osgi.command.scope=custom"
+    },
+    service = Object.class
+)
+public class HelloWorldCommand {
+    
+    public void say(String what) {
+        System.out.println(helloService.hello(what));
+    }
+    
+    @Reference(
+               policy=ReferencePolicy.DYNAMIC,
+               policyOption=ReferencePolicyOption.GREEDY,
+               cardinality=ReferenceCardinality.MANDATORY)
+    protected void setHelloService(HelloService helloService) {
+        System.out.println("Setting " + helloService.getClass().getName());
+        this.helloService = helloService;
+    }
+    
+    protected void unsetHelloService(HelloService helloService) {
+        System.out.println("Unsetting helloService " + helloService.getClass().getName());
+        if (helloService == this.helloService) {
+            this.helloService = null;
+        }
+    }
+
+    private HelloService helloService;
+}</code></pre></div><p><strong>Note:</strong> We now need a specific set and unset method for our reference, according to the OSGi specification:</p><h6>Try It!</h6><p>Deploy the new command, then restart the service implementations as you like. Validate the behavior of the system. Did the results match your expectations?</p><p>Well, at least you’ve seen one area where common expectation and the actual behavior of the runtime can differ. But that’s easy to fix, once you know what to expect.</p></article><article id="8"><h2>More References</h2><p>As promised: Liferay's documentation has fabulous chapters about more options. Because we explicitly only want to cover the bare minimum - please see the documentation for more details.</p><p>We hope you've gotten some good hints here and have a better understanding of the runtime behavior set:</p><ul><li><a href="https://customer.liferay.com/documentation/7.0/develop/tutorials/-/official_documentation/tutorials/overriding-service-references">Overriding service references</a></li><li><a href="https://customer.liferay.com/documentation/7.0/develop/reference/-/official_documentation/reference/using-the-felix-gogo-shell">Using Felix Gogo Shell</a></li></ul></article><input type="hidden" value="Deploy"><input type="hidden" value="Liferay Learning"></div></div><nav class="col-xs-16 col-md-offset-2 col-md-5"><div class="docs-nav-container"><div class="affix-top docs-nav"><div ref="readingContainer"></div></div></div></nav></div></div></div></main></div></div><script src="/js/bundles/llhUe.js"></script><script>var data = '{"pageLocation":"index.children.docs.children.osgi-basics","site":{"title":"Liferay Learning","googleAnalytics":"UA-37033501-5","index":{"title":"Home","description":"Let\'s Learn!","srcFilePath":"src/pages/index.soy","id":"pages","location":"/./","url":"/./","children":{"docs":{"children":{"empty":{"title":"empty page","description":"empty page","layout":"guide","icon":"cloud","weight":4,"srcFilePath":"src/pages/docs/empty.md","id":"empty","location":"/docs/empty.html","url":"/docs/empty.html"},"foundational-concepts":{"children":{"04-usermanagement":{"title":"User Management","description":"User Management","layout":"guide","icon":"cloud","weight":4,"srcFilePath":"src/pages/docs/foundational-concepts/04-usermanagement.md","id":"04-usermanagement","location":"/docs/foundational-concepts/04-usermanagement.html","url":"/docs/foundational-concepts/04-usermanagement.html"},"10-pagemanagement":{"title":"Page Management","description":"Page Management","layout":"guide","icon":"cloud","weight":4,"srcFilePath":"src/pages/docs/foundational-concepts/10-pagemanagement.md","id":"10-pagemanagement","location":"/docs/foundational-concepts/10-pagemanagement.html","url":"/docs/foundational-concepts/10-pagemanagement.html"},"30-personal-space":{"title":"Personal Pages","description":"Personal Pages","layout":"guide","icon":"cloud","weight":4,"srcFilePath":"src/pages/docs/foundational-concepts/30-personal-space.md","id":"30-personal-space","location":"/docs/foundational-concepts/30-personal-space.html","url":"/docs/foundational-concepts/30-personal-space.html"}},"childIds":["10-pagemanagement","30-personal-space","04-usermanagement"]},"osgi-basics":{"children":{"create-another-service":{"title":"Deploy","description":"Let\'s get started!","layout":"guide","icon":"cloud","weight":4,"srcFilePath":"src/pages/docs/osgi-basics/create-another-service.md","id":"create-another-service","location":"/docs/osgi-basics/create-another-service.html","url":"/docs/osgi-basics/create-another-service.html"},"your-first-service":{"title":"Exercise: Your First Service","description":"Let\'s get started!","icon":"flash","layout":"guide","weight":1,"srcFilePath":"src/pages/docs/osgi-basics/your-first-service.md","id":"your-first-service","location":"/docs/osgi-basics/your-first-service.html","url":"/docs/osgi-basics/your-first-service.html"}},"title":"Deploy","description":"Let\'s get started!","layout":"guide","icon":"cloud","weight":4,"srcFilePath":"src/pages/docs/osgi-basics/index.md","id":"osgi-basics","location":"/docs/osgi-basics/","url":"/docs/osgi-basics/","childIds":["your-first-service","create-another-service"],"active":true}},"title":"Docs","description":"Everything you need to know to get started.","srcFilePath":"src/pages/docs/index.soy","id":"docs","location":"/docs/","url":"/docs/","childIds":["osgi-basics","empty",null],"active":true}},"childIds":["docs"]},"basePath":"","topbar":[{"href":"/docs/","label":"Docs","selected":true}]}}'; if (typeof electric !== 'undefined') {electric.init(data);}else {document.addEventListener('DOMContentLoaded', function() {electric.init(data);});}</script></div><script data-senna-track="permanent" src="/js/electric/electric.js"></script></body></html>
