@@ -27,6 +27,8 @@ $liferay-p: #09101d;
 $input-border-focus: $liferay-primary !default;
 $form-group-margin-bottom: 30px !default;
 
+$break-large: 1800px;
+
 
 
 // Mixin
@@ -153,35 +155,7 @@ $form-group-margin-bottom: 30px !default;
     }
 }
 
-@mixin fh5co-gradient-1() {
-    // Gradient
-    background-color: $liferay-white;
-    
-    
-    /* 
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMzZjk1ZWEiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzUyZDNhYSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
-    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, rgb(63, 149, 234)), color-stop(1, rgb(82, 211, 170)));
-   
-    background-image: -webkit-repeating-linear-gradient(top left, rgb(63, 149, 234) 0%, rgb(82, 211, 170) 100%);
-    
-    background-image: repeating-linear-gradient(to bottom right, rgb(63, 149, 234) 0%, rgb(82, 211, 170) 100%);
-    background-image: -ms-repeating-linear-gradient(top left, rgb(63, 149, 234) 0%, rgb(82, 211, 170) 100%);
-    */
-}
 
-@mixin fh5co-gradient() {
-    // Gradient
-    background-color: $liferay-white;
-    
-    
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMzZjk1ZWEiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzUyZDNhYSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
-    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, rgb(63, 149, 234)), color-stop(1, rgb(82, 211, 170)));
-   
-    background-image: -webkit-repeating-linear-gradient(top left, rgb(63, 149, 234) 0%, rgb(82, 211, 170) 100%);
-    
-    background-image: repeating-linear-gradient(to bottom right, rgb(63, 149, 234) 0%, rgb(82, 211, 170) 100%);
-    background-image: -ms-repeating-linear-gradient(top left, rgb(63, 149, 234) 0%, rgb(82, 211, 170) 100%);
-}
 
 
 
@@ -210,8 +184,13 @@ body {
     background: $liferay-bg-color;
     height: 100%;
     position: relative;
-
+    background-image: url(/images/Landing-Hero-01.svg);
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    background-position: 90% 8%;
 }
+
+
 
 a {
     color: $liferay-primary;
@@ -291,11 +270,12 @@ h6 {
     width: 100%;
     opacity: 1;
     top: 0;
-    margin-top: 40px;
-
+    background-color: $liferay-white;
 
     @media screen and (max-width: $screen-sm) {
         margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
         background: $liferay-white;
         -webkit-box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2);
         -moz-box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2);
@@ -412,7 +392,6 @@ h6 {
         padding-left: 0;
         color: $liferay-white;
         padding-bottom: 50px;
-
     }
     &.navbar-fixed-top {
         position: fixed !important;
@@ -479,31 +458,115 @@ h6 {
 
 }
 
+#fh5co-promotion {
+    background-attachment: fixed;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    background-color: $liferay-primary;
+    height: 325px;
+    .text-wrap {
+        display: table;
+        width: 100%;
+        position: relative;
+        z-index: 4;
+    }
+    .text-inner {
+        display: table-cell;
+        vertical-align: middle;
+        padding-top: 90px;
+
+        button {
+            font-weight: 600;
+            color: $liferay-primary;
+            font-size: 1em;
+            /* text-transform: uppercase; */
+            margin: 0px auto 0;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: $liferay-white;
+            border: none;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            -ms-transition: all 0.4s ease-in-out 0s;
+            -o-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+
+        button:hover {
+            background-color: #1B324B;
+            color: white;
+            cursor: pointer;
+            transform: translateY( -7px);
+            box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+        }
+
+        button:active {
+            transform: translateY( -7px);
+            box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+        }
+
+        h1 {
+            font-size: calc(1.2vw + 1.2vh + 1.2vmin);
+            color: $liferay-white;
+            margin: 10px 0 20px 0;
+            font-weight: 700;
+            text-transform: uppercase;
+            max-width: 1150px;
+        }
+
+        h2 {
+            font-size: 1.75em;
+            line-height: 38px;
+            font-weight: 400;
+            color: $liferay-h2;
+        }
+        h3 {
+            color: $liferay-white;
+            margin-top: 28px;
+            font-size: calc(.7vw + .7vh + .7vmin);
+        }
+        img {
+            max-width: 225px;
+            left: 1px;
+            z-index: 1px;
+            top: auto;
+            bottom: 1px;
+        }
+    }
+    .heading {
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        clear: none;
+        h2 {
+            font-size: 2.25em;
+            font-weight: 600;
+            color: $liferay-h1;
+            &.left-border {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        h3 {
+            font-weight: 400;
+        }
+    }
+
+}
+
 
 #fh5co-home {
-    background-color: transparent;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
     width: 100%;
-
-    background-color: $liferay-white;
     color: #fff;
     overflow: hidden;
-    
-    .gradient {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 2;
-        opacity: .9;
-        -webkit-backface-visibility: hidden; // for Chrome Windows
-        @include fh5co-gradient-1;
-    }
-     &,
-    
+
     .text-wrap {
         height: 750px;
     }
@@ -515,8 +578,9 @@ h6 {
     }
     .text-inner {
         display: table-cell;
-        vertical-align: middle;
-        text-align: center;
+        text-align: left;
+        margin-left: 0;
+        padding-top: 120px;
         a {
             color: rgba(100, 116, 128, .5);
             border-bottom: 2px dashed rgba(9, 16, 29, .5);
@@ -551,31 +615,11 @@ h6 {
 
 
 
-// Slant
-.slant {
-    position: absolute;
-    transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    background-color: #fff;
-    content: "";
-    z-index: 3;
-    display: inline-block;
-    height: 70px;
-    bottom: 0;
-    margin-bottom: -35px;
-    padding: 0;
-    width: 101%;
-}
 
 #fh5co-intro {
     position: relative;
     bottom: 0;
-    margin-top: -150px;
     z-index: 10;
-    padding-bottom: 7em;
     @media screen and (max-width: $screen-sm) {
         padding-bottom: 3em;
     }
@@ -745,7 +789,7 @@ h6 {
 #fh5co-contact,
 #fh5co-about,
 #fh5co-pricing {
-    padding: 4em 0;
+    padding: 6em 0;
     @media screen and (max-width: $screen-sm) {
         padding: 2em 0;
     }
@@ -762,9 +806,8 @@ h6 {
 
 #fh5co-benefits {
 
-
-    @include fh5co-gradient;
-
+    background-color: $liferay-primary;
+    background-repeat: no-repeat;
     overflow: hidden;
     position: relative;
     color: rgba(255, 255, 255, .7);
@@ -795,10 +838,15 @@ h6 {
     h3 {
         font-size: 24px;
         color: $liferay-white;
+        text-align: center;
+    }
+    p{
+        text-align: center;
     }
     .icon {
         font-size: 70px;
         margin-bottom: 30px;
+        max-height: 200px;
         @include inline-block;
         &:before {
             color: $liferay-white;
@@ -817,6 +865,7 @@ h6 {
         }
         h3 {
             font-weight: 400;
+            text-align: left;
         }
     }
 }
@@ -829,10 +878,64 @@ h6 {
     background-attachment: fixed;
     position: relative;
     width: 100%;
-    padding: 9em 0 0em 0;
+    padding: 0em 0 0em 0;
     @media screen and (max-width: $screen-sm) {
         padding: 4em 0;
     }
+    .price-crossout {
+        font-size: 55%;
+        margin-right: 10px;
+        color: #737C7F;
+        position: relative;
+    }
+    .price-crossout:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 50%;
+        right: 0;
+        border-top: 3px solid;
+        border-radius: 5px;
+        border-color: inherit;
+
+        -webkit-transform: rotate(-5deg);
+        -moz-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+        -o-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+
+    button {
+        height: auto;
+        font-weight: 600;
+        color: white;
+        font-size: 1em;
+        /* text-transform: uppercase; */
+        margin: 25px auto 0;
+        text-align: center;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: $liferay-primary;
+        border: none;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        -ms-transition: all 0.4s ease-in-out 0s;
+        -o-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+    }
+
+    button:hover {
+        background-color: #393e46;
+        cursor: pointer;
+        transform: translateY( -7px);
+        box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+    }
+
+    button:active {
+        transform: translateY( -7px);
+        box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+    }
+
     .fh5co-overlay {
         position: absolute;
         top: 0;
@@ -893,7 +996,7 @@ h6 {
             font-weight: 600;
             font-size: 2em;
         }
-        small{
+        small {
             font-size: 55%;
             color: #737C7F;
         }
@@ -976,11 +1079,11 @@ h6 {
 }
 
 #fh5co-work {
-    // background: $liferay-secondary;
     overflow: hidden;
     position: relative;
     color: rgba(255, 255, 255, .8);
-    @include fh5co-gradient;
+    background-color: #1B324B;
+
     a {
         color: rgba(255, 255, 255, .5);
         text-decoration: underline;
@@ -1119,38 +1222,36 @@ h6 {
     padding-bottom: 50px;
     margin-bottom: 50px;
     clear: both;
-
     button {
+        height: auto;
+        font-weight: 600;
+        color: white;
+        font-size: 1em;
+        /* text-transform: uppercase; */
+        margin: 25px auto 0;
+        text-align: center;
         padding: 15px;
         border-radius: 8px;
-        background: $liferay-primary;
-        color: $liferay-white;
+        background-color: $liferay-primary;
         border: none;
-        cursor: pointer;
-        font-size: 1em;
-        font-weight: 600;
-        height: auto;
-        margin-top: 10px;
-
-        &:hover,
-        &:active,
-        &:focus {
-            background: #393e46 !important;
-            outline: none !important;
-            
-            transform: translateY(-20px);
-            box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
-            
-            
-            -webkit-transition: all 0.3s ease-in-out 0s;
-            -moz-transition: all 0.3s ease-in-out 0s;
-            -ms-transition: all 0.3s ease-in-out 0s;
-            -o-transition: all 0.3s ease-in-out 0s;
-            transition: all 0.3s ease-in-out 0s;
-        }
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        -ms-transition: all 0.4s ease-in-out 0s;
+        -o-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
     }
 
+    button:hover {
+        background-color: #393e46;
+        cursor: pointer;
+        transform: translateY( -7px);
+        box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+    }
 
+    button:active {
+        transform: translateY( -7px);
+        box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+    }
     h2 {
         margin: 0 0 30px 0;
         font-size: 2.25em;
@@ -1309,7 +1410,7 @@ h6 {
 }
 
 .row-bottom-padded-lg {
-    padding-bottom: 7em;
+    padding-bottom: 2em;
     @media screen and (max-width: $screen-sm) {
         padding-bottom: 2em;
     }
@@ -1335,6 +1436,34 @@ h6 {
     animation-duration: .3s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+}
+
+.benefits-lego-top {
+    height: 250px;
+    background-image: url(/images/curvy-top-1.svg);
+    background-size: cover;
+    width: 100%;
+}
+
+.benefits-lego-bottom {
+    height: 250px;
+    background-image: url(/images/curvy-bot-1.svg);
+    background-size: cover;
+    width: 100%;
+}
+
+.work-lego-top {
+    height: 250px;
+    background-image: url(/images/curvy-top-2.svg);
+    background-size: cover;
+    width: 100%;
+}
+
+.work-lego-bottom {
+    height: 250px;
+    background-image: url(/images/curvy-bot-2.svg);
+    background-size: cover;
+    width: 100%;
 }
 
 

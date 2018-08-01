@@ -417,14 +417,6 @@
 					}, 200);
 
 					setTimeout(function() {
-						counters.find('.js-counter').countTo({
-						 	formatter: function (value, options) {
-				      		return value.toFixed(options.decimals);
-				   		},
-						});
-					}, 400);
-
-					setTimeout(function() {
 						counters.find('.to-animate-2').each(function( k ) {
 							var el = $(this);
 							
@@ -477,11 +469,6 @@
 
 
 	
-	
-
-
-	
-	
 
 	// Document on load.
 	$(function(){
@@ -514,4 +501,10 @@
 	});
 
 
+
+
+
+
 }());
+
+
