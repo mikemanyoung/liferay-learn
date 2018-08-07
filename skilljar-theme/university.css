@@ -73,47 +73,12 @@ html {
     border: 2px solid #0B5FFF;
 }
 
-
-
-/* Side Tab */
-
-.side_tab {
-    position: fixed;
-    left: 0px;
-    top: 225px;
-    background-color: #0B63CE;
-    padding: 20px 10px 20px 10px;
-    -webkit-writing-mode: vertical-lr;
-    -ms-writing-mode: tb-lr;
-    writing-mode: vertical-lr;
-}
-
-.side_tab_text {
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 1em;
-    margin: 0 auto;
-    font-weight: 600;
-    color: #fff;
-    -ms-transform: rotate(180deg);
-    /* IE 9 */
-    -webkit-transform: rotate(180deg);
-    /* Safari 3-8 */
-    transform: rotate(180deg);
-}
-
-
-
-
-
 /* Page Background */
 
 .sj-page-series #skilljar-content,
 .sj-page-catalog #skilljar-content {
     background-color: #fff;
 }
-
-
 
 /*  Hero Text */
 
@@ -130,13 +95,6 @@ html {
     font-size: 1.25em;
     font-weight: 600 !important;
     line-height: 0;
-}
-
-.non-subscriber-mark {
-    background: #FDCC4A;
-    color: #fff;
-    padding: 5px;
-    margin-right: 10px;
 }
 
 .sj-page-series .one-col-full,
@@ -222,8 +180,6 @@ html {
     background-color: #353846;
     color: #fff;
 }
-
-
 
 
 /* Card styles */
@@ -743,6 +699,8 @@ iframe html {
     width: 100%;
     height: 100%;
 }
+
+/* exxercises iframe */
 
 @media only screen and (max-width: 600px) {
     #exercise-content {
