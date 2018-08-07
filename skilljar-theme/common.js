@@ -1,7 +1,7 @@
 function cueCoursePurchase() {
   var purchaseButtonPrice = $(".purchase-button-price").html();
 
-  if (purchaseButtonPrice !== null && purchaseButtonPrice.indexOf("FREE") === -1) {
+  if (purchaseButtonPrice !== null && purchaseButtonPrice.indexOf("FREE") == -1) {
     $('.purchase-button').click(function(e) {
       e.preventDefault();
       $('#terms-modal').show();
