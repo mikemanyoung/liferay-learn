@@ -159,56 +159,6 @@ function cueResumeButton() {
   }
 };
 
-function cueTilesFeatured() {
-
-  if (document.querySelectorAll('.sj-page-catalog').length > 0) {
-    var featuredCourses = $('.coursebox-container[data-tags*="x-featured"]');
-    var featuredCount = featuredCourses.length;
-
-    // we need two tiles before we build the featured tiles
-    if (featuredCount > 1) {
-      var featuredWrapper = $('<div />').attr('id', 'catalog-featured-wrapper');
-      $('#catalog-content').before(featuredWrapper);
-
-      $('<div />')
-        .attr('id', 'catalog-courses-featured')
-        .addClass('catalog-center-width')
-        .prependTo('#catalog-featured-wrapper');
-
-      featuredCourses.each(function(index, elem) {
-
-        // limit of 2 featured tiles, so return False to end loop
-        if (index > 1) {
-          return false;
-        }
-
-        var featured = $(this).clone();
-        $(this).addClass('cloned');
-
-        var temp = $('#templateTileFeatured').clone();
-
-        var title = $(featured).find('.coursebox-text').text();
-        var imageSrc = $(featured).find('.coursebox-image img').data('src');
-        var href = $(featured).attr('href');
-        var tagString = $(featured).find('[data-tag^="xz-"] span').text();
-        tagString = createTagString(tagString, 'xz-');
-
-        $(temp).find('h3').text(title);
-        $(temp).attr('href', href);
-        $(temp).find('.image-background').css('backgroundImage', 'url("' + imageSrc + '")');
-
-        if (tagString) {
-          $(temp).find('p').text(tagString);
-        }
-
-        $(temp).removeAttr('id').appendTo('#catalog-courses-featured');
-      });
-    };
-  };
-
-  $('#templateTileFeatured').remove();
-}
-
 function cueTiles() {
 
   var tiles = document.querySelectorAll('.sj-page-catalog a.coursebox-container');
@@ -240,7 +190,6 @@ function cueTiles() {
 }
 
 jQuery(document).ready(function($) {
-  cueTilesFeatured();
   cueTiles();
   cueDetail();
   cueSeriesHero();

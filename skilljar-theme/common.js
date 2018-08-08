@@ -80,7 +80,7 @@ function cuePassportPurchase() {
     $('#login-content .sj-text-continue').prop("disabled", !$("#id_custom_24zitnekfjb34").prop("checked")); 
   })
   
-
+  $('#login-content .sj-text-continue').attr("disabled","disabled"); 
   $('#login-content .sj-text-continue').attr('value','Agree and Continue'); 
 
   $("<div class='signup-hero'></div>").insertBefore('#login-content');
