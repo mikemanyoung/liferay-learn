@@ -1,0 +1,109 @@
+/* passport sign up */
+
+.grey-bg,
+.top-row-grey {
+    background-color: #fff;
+}
+
+#login-content {
+    border-top: none;
+}
+
+.passport-holder {
+    font-size: 100%;
+    font-weight: 400;
+    padding-left: 10px;
+    color: #7D7D7D;
+}
+
+.signup-hero {
+    background-image: url(https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fpatrick_kim_liferay_com_brv6j7%2Fpublic%2FRectangle+1023.1532124586290.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    height: 20em;
+}
+
+label {
+    font-size: 1.25em;
+    margin-bottom: .5em;
+}
+
+.field-access-flow ul li:nth-child(2) {
+    margin-top: 70px !important;
+}
+
+.link-text {
+    font-size: 1.25em;
+}
+
+.help-text,
+form .help-text {
+  color: #4d4d4d;
+  font-size: 20px;
+}
+
+/* hero image */
+
+.sj-page-catalog .catalog-header .catalog-hero {
+    background-image: url(https://learnliferay.wedeploy.io/images/university/Passport-Liferay-Hero.svg);
+}
+
+/* hide prices from courses */
+
+a.coursebox-container .storefront-price,
+a.coursebox-container .course-series-count {
+    display: none;
+}
+
+a.coursebox-container.course .coursebox-text-description {
+    display: none !important;
+}
+
+@media (max-width:925px) and (min-width: 900px) {
+    .sj-page-catalog .catalog-header .catalog-hero {
+        background-position: 90% 50%;
+    }
+}
+
+@media (max-width:1050px) and (min-width: 900px) {
+    .sj-page-catalog .catalog-header .catalog-hero {
+        background-size: 45%;
+    }
+}
+
+@media (max-width:925px) and (min-width: 800px) {
+    .sj-page-catalog .catalog-header .catalog-hero .hero-text {
+        width: 784px;
+    }
+}
+
+@media (max-width:1024px) and (min-width: 925px) {
+    .sj-page-catalog .catalog-header .catalog-hero .hero-text {
+        width: 861px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sj-page-catalog .catalog-header .catalog-hero .hero-text {
+        width: 861px;
+    }
+}
+
+@media (max-width:1213px) and (min-width:1050px) {
+    .sj-page-catalog .catalog-header .catalog-hero {
+        background-size: 45%;
+    }
+}
+
+@media (max-width:1300px) and (min-width: 1213px) {
+    .sj-page-catalog .catalog-header .catalog-hero {
+        background-size: 55%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .sj-page-catalog .catalog-header .catalog-hero {
+        background-size: contain;
+    }
+}

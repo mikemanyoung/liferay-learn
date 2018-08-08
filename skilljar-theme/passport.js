@@ -4,8 +4,8 @@ $(document).ready(function() {
   cueDetailsPane();
   cueHighlightTiles();
 
-  // university specific code
+  // passport specific code
 
-  cueCoursePurchase();
+  cuePassportPurchase();
   cuePassportOwner();
 });
