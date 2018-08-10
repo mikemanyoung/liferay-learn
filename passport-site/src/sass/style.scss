@@ -220,6 +220,9 @@ h6 {
     font-weight: 400;
     margin: 0 0 30px 0;
 }
+button{
+    outline: none;
+}
 
 ::-webkit-selection {
     color: $liferay-body-color;
@@ -917,9 +920,7 @@ h6 {
     &:before,
     &:after {
         position: absolute;
-
-        background-color: transparent;
-
+        background-color: $liferay-primary;
         content: "";
         z-index: 3;
         display: inline-block;
@@ -1253,7 +1254,7 @@ h6 {
     &:after {
         position: absolute;
 
-        background-color: transparent;
+        background-color: #1B324B;
 
         content: "";
         z-index: 3;
