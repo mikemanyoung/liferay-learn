@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.416 35.261">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #444;
+      }
+    </style>
+  </defs>
+  <path id="dropdown" class="cls-1" d="M66.43,20a4,4,0,0,0-5.66,0L33.58,47.17a4,4,0,0,0,0,5.66L60.77,80a4,4,0,1,0,5.65-5.66L42.06,50,66.42,25.66A4,4,0,0,0,66.43,20Z" transform="translate(-18.827 67.668) rotate(-90)"/>
+</svg>
