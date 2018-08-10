@@ -44,6 +44,9 @@ h6 {
   font-weight: 400;
   margin: 0 0 30px 0; }
 
+button {
+  outline: none; }
+
 ::-webkit-selection {
   color: #A2AEB3;
   background: #f7f8f9; }
@@ -733,7 +736,7 @@ h6 {
   color: rgba(255, 255, 255, 0.7); }
   #fh5co-benefits:before, #fh5co-benefits:after {
     position: absolute;
-    background-color: transparent;
+    background-color: #0B63CE;
     content: "";
     z-index: 3;
     display: inline-block;
@@ -998,7 +1001,7 @@ h6 {
       color: white; }
   #fh5co-work:before, #fh5co-work:after {
     position: absolute;
-    background-color: transparent;
+    background-color: #1B324B;
     content: "";
     z-index: 3;
     display: inline-block;
