@@ -184,10 +184,12 @@ body {
     background: $liferay-bg-color;
     height: 100%;
     position: relative;
+    /* Save it until promotion ends
     background-image: url(/images/Landing-Hero-01.svg);
     background-size: 1000px;
     background-repeat: no-repeat;
-    background-position: 90% 8%;
+    background-position: 80% 3%;
+    */
 }
 
 
@@ -277,10 +279,6 @@ h6 {
         padding-top: 0;
         padding-bottom: 0;
         background: $liferay-white;
-        -webkit-box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2);
-        -moz-box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2);
-        -ms-box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2);
-        box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2);
         .navbar-liferay {
             color: $liferay-primary !important;
         }
@@ -314,11 +312,79 @@ h6 {
                 }
             }
         }
-    } // padding-top: 15px;
+    }
     .navbar {
         padding-bottom: 0;
         margin-bottom: 0;
     }
+    .navbar-promo {
+        float: right;
+        display: block;
+        color: $liferay-primary;
+        margin: 21px 0 0 0;
+        font-size: 1.25em;
+        font-weight: 600;
+        visibility: hidden;
+    }
+    .navbar-promo-crossout {
+        float: right;
+        display: block;
+        color: $liferay-primary;
+        margin: 15px 20px 0 20px;
+        font-size: 1.25em;
+        font-weight: 600;
+        color: #737C7F;
+        position: relative;
+        visibility: hidden;
+    }
+    .navbar-promo-crossout:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 50%;
+        right: 0;
+        border-top: 3px solid;
+        border-radius: 5px;
+        border-color: inherit;
+        -webkit-transform: rotate(-5deg);
+        -moz-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+        -o-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+        visibility: hidden;
+    }
+    .navbar-button {
+        float: right;
+        display: block;
+        font-weight: 600;
+        color: white;
+        font-size: 1em;
+        margin: 10px 0 0 0;
+        text-align: center;
+        padding: 5px;
+        border-radius: 8px;
+        background: white;
+        border: 3px solid white;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        -ms-transition: all 0.4s ease-in-out 0s;
+        -o-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+        visibility: hidden;
+    }
+    .navbar-button:hover {
+        color: white;
+        border: white;
+        cursor: pointer;
+        box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+        visibility: hidden;
+    }
+
+    .navbar-button:active {
+        box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+        visibility: hidden;
+    }
+
     #navbar {
         li {
             a {
@@ -396,15 +462,63 @@ h6 {
     &.navbar-fixed-top {
         position: fixed !important;
         background: $liferay-white;
-        -webkit-box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2);
-        -moz-box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2);
-        -ms-box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2);
-        box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2);
         margin-top: 0px;
         top: 0;
         .navbar-liferay {
             color: $liferay-primary;
         }
+        .navbar-promo {
+            float: right;
+            display: block;
+            color: $liferay-primary;
+            margin: 22px 10px 0 0;
+            font-size: 1em;
+            font-weight: 600;
+            visibility: visible;
+        }
+        .navbar-promo-crossout {
+            float: right;
+            display: block;
+            margin: 22px 10px 0 0;
+            font-size: 1em;
+            font-weight: 600;
+            color: #737C7F;
+            opacity: .75;
+            visibility: visible;
+            text-decoration: line-through;
+        }
+        .navbar-button {
+            float: right;
+            display: block;
+            font-weight: 600;
+            color: $liferay-primary;
+            font-size: 1em;
+            margin: 10px 0 0 0;
+            text-align: center;
+            padding: 5px;
+            border-radius: 8px;
+            background: white;
+            border: 3px solid $liferay-primary;
+            visibility: visible;
+        }
+        .navbar-button:hover {
+            color: #1B324B;
+            border: 3px solid #1B324B;
+            cursor: pointer;
+            box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+            visibility: visible;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            -ms-transition: all 0.4s ease-in-out 0s;
+            -o-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+
+        .navbar-button:active {
+            box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+            visibility: visible;
+        }
+
         #navbar {
             li {
                 a {
@@ -458,15 +572,28 @@ h6 {
 
 }
 
-#fh5co-promotion {
-    background-attachment: fixed;
+/* Promo Home */
+
+#fh5co-home {
+    background-size: cover;
     position: relative;
     width: 100%;
-    text-align: center;
     color: #fff;
     overflow: hidden;
-    background-color: $liferay-primary;
-    height: 325px;
+    background: rgb(0, 114, 255);
+    background: -moz-linear-gradient(0deg, rgba(0, 114, 255, 1) 0%, rgba(0, 198, 255, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0, 114, 255, 1) 0%, rgba(0, 198, 255, 1) 100%);
+    background: linear-gradient(0deg, rgba(0, 114, 255, 1) 0%, rgba(0, 198, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0072ff", endColorstr="#00c6ff", GradientType=1);
+    .promo-background {
+        background-image: url(/images/Clouds.svg);
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-position: 40% 50%;
+    }
+    .text-wrap {
+        height: 650px;
+    }
     .text-wrap {
         display: table;
         width: 100%;
@@ -475,9 +602,13 @@ h6 {
     }
     .text-inner {
         display: table-cell;
-        vertical-align: middle;
-        padding-top: 90px;
-
+        text-align: left;
+        margin-left: 0;
+        padding-top: 175px;
+        background-image: url(/images/Promo-Hero.svg);
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+        background-size: 50%;
         button {
             font-weight: 600;
             color: $liferay-primary;
@@ -488,6 +619,93 @@ h6 {
             padding: 15px;
             border-radius: 8px;
             background-color: $liferay-white;
+            border: none;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            -ms-transition: all 0.4s ease-in-out 0s;
+            -o-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+
+        button:hover {
+            background-color: $liferay-primary;
+            color: $liferay-white;
+            cursor: pointer;
+            transform: translateY( -7px);
+            box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+        }
+
+        button:active {
+            transform: translateY( -7px);
+            box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+        }
+
+        h1 {
+            font-size: 2em;
+            color: $liferay-white;
+            margin: 0 0 20px 0;
+            font-weight: 600;
+        }
+        h2 {
+            font-size: 1.75em;
+            line-height: 38px;
+            font-weight: 400;
+            color: $liferay-h2;
+            margin: 0;
+        }
+        h3 {
+            padding-top: 25px;
+        }
+        h4 {
+            text-transform: uppercase;
+            color: #78FBFF;
+            font-weight: 600;
+        }
+        small {
+            font-size: 50%;
+            opacity: .75;
+            color: $liferay-white;
+        }
+        span {
+            text-decoration: line-through;
+        }
+    }
+}
+
+
+
+/* Disable Until Promo Ends
+#fh5co-home {
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    width: 100%;
+    color: #fff;
+    overflow: hidden;
+
+    .text-wrap {
+        height: 650px;
+    }
+    .text-wrap {
+        display: table;
+        width: 100%;
+        position: relative;
+        z-index: 4;
+    }
+    .text-inner {
+        display: table-cell;
+        text-align: left;
+        margin-left: 0;
+        padding-top: 120px;
+        button {
+            font-weight: 600;
+            color: $liferay-white;
+            font-size: 1em;
+            margin: 0px auto 0;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: $liferay-primary;
             border: none;
             -webkit-transition: all 0.4s ease-in-out 0s;
             -moz-transition: all 0.4s ease-in-out 0s;
@@ -510,91 +728,6 @@ h6 {
         }
 
         h1 {
-            font-size: calc(1.2vw + 1.2vh + 1.2vmin);
-            color: $liferay-white;
-            margin: 10px 0 20px 0;
-            font-weight: 700;
-            text-transform: uppercase;
-            max-width: 1150px;
-        }
-
-        h2 {
-            font-size: 1.75em;
-            line-height: 38px;
-            font-weight: 400;
-            color: $liferay-h2;
-        }
-        h3 {
-            color: $liferay-white;
-            margin-top: 28px;
-            font-size: calc(.7vw + .7vh + .7vmin);
-        }
-        img {
-            max-width: 225px;
-            left: 1px;
-            z-index: 1px;
-            top: auto;
-            bottom: 1px;
-        }
-    }
-    .heading {
-        padding-bottom: 0px;
-        margin-bottom: 0px;
-        clear: none;
-        h2 {
-            font-size: 2.25em;
-            font-weight: 600;
-            color: $liferay-h1;
-            &.left-border {
-                &:after {
-                    display: none;
-                }
-            }
-        }
-        h3 {
-            font-weight: 400;
-        }
-    }
-
-}
-
-
-#fh5co-home {
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    width: 100%;
-    color: #fff;
-    overflow: hidden;
-
-    .text-wrap {
-        height: 750px;
-    }
-    .text-wrap {
-        display: table;
-        width: 100%;
-        position: relative;
-        z-index: 4;
-    }
-    .text-inner {
-        display: table-cell;
-        text-align: left;
-        margin-left: 0;
-        padding-top: 120px;
-        a {
-            color: rgba(100, 116, 128, .5);
-            border-bottom: 2px dashed rgba(9, 16, 29, .5);
-            @include transition(.5s);
-            &:hover,
-            &:active,
-            &:focus {
-                text-decoration: none;
-                color: $liferay-h2;
-                border-bottom: 2px dashed $liferay-h1;
-            }
-        }
-
-        h1 {
             font-size: 3em;
             color: $liferay-h1;
             margin: 0 0 20px 0;
@@ -613,13 +746,13 @@ h6 {
     }
 }
 
-
-
+*/
 
 #fh5co-intro {
     position: relative;
     bottom: 0;
     z-index: 10;
+    padding-top: 4em;
     @media screen and (max-width: $screen-sm) {
         padding-bottom: 3em;
     }
@@ -642,14 +775,13 @@ h6 {
         background-size: cover;
         position: relative;
         backgroun-repeat: no-repeat;
-
         @media screen and (max-width: $screen-sm) {
             width: 100%;
         }
         > .overlay-darker {
             z-index: 8;
             opacity: 1;
-            background: $liferay-primary;
+            background: $liferay-white;
             position: absolute;
             left: 0;
             right: 0;
@@ -697,36 +829,6 @@ h6 {
             font-weight: 400;
 
         }
-
-        &:hover,
-        &:focus {
-            > .overlay {
-                opacity: 0;
-                z-index: 9;
-            }
-            > .fh5co-text {
-                color: $liferay-white;
-                .fh5co-intro-icon {
-                    color: $liferay-white;
-                }
-
-            }
-            h2 {
-                color: $liferay-white;
-            }
-            p {
-                color: $liferay-white;
-            }
-            .btn {
-                border: 2px solid $liferay-white !important;
-                background: transparent;
-                &:hover {
-                    background: $liferay-primary !important;
-                    border: 2px solid $liferay-primary !important;
-                }
-            }
-        }
-
     }
 }
 
@@ -737,6 +839,7 @@ h6 {
     width: 100%;
     display: block;
     float: left;
+    padding-top: 100px;
     span {
         display: block;
         margin-bottom: 20px;
@@ -798,9 +901,9 @@ h6 {
 #fh5co-benefits,
 #fh5co-work,
 #fh5co-counters {
-    padding: 4em 0;
+    padding: 2em 0;
     @media screen and (max-width: $screen-sm) {
-        padding: 4em 0;
+        padding: 2em 0;
     }
 }
 
@@ -840,13 +943,12 @@ h6 {
         color: $liferay-white;
         text-align: center;
     }
-    p{
+    p {
         text-align: center;
     }
     .icon {
-        font-size: 70px;
         margin-bottom: 30px;
-        max-height: 200px;
+        max-height: 150px;
         @include inline-block;
         &:before {
             color: $liferay-white;
@@ -882,9 +984,64 @@ h6 {
     @media screen and (max-width: $screen-sm) {
         padding: 4em 0;
     }
+    select {
+        font-size: 1.2em;
+        text-align-last: center;
+        font-weight: 600;
+        color: #444;
+        border: none;
+        border-bottom: 2px solid #D5D6D8;
+        border-radius: 2px;
+        min-width: 220px;
+        padding-bottom: 5px;
+        /* for Firefox */
+        -moz-appearance: none;
+        /* for Chrome */
+        -webkit-appearance: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        outline: none !important;
+
+        background-image: url(/images/dropdown-normal.svg);
+        background-repeat: no-repeat;
+        background-position: 195px center;
+        background-size: .7em;
+    }
+    select:hover {
+        cursor: pointer;
+        background-image: url(/images/dropdown-hover.svg);
+        border-bottom: 2px solid #444;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        -ms-transition: all 0.4s ease-in-out 0s;
+        -o-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+    }
+
+    option {
+        background-color: white;
+        color: #444;
+        text-align-last: center;
+        font-weight: 400;
+        font-size: .8em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        outline: none !important;
+    }
+    option:hover {
+        background-color: #e8e8e8;
+        color: #444;
+        text-align-last: center;
+    }
+
+    .local-price {
+        display: none;
+        margin-top: 30px;
+    }
+
     .price-crossout {
         font-size: 55%;
-        margin-right: 10px;
+        margin-left: 5px;
         color: #737C7F;
         position: relative;
     }
@@ -911,7 +1068,7 @@ h6 {
         color: white;
         font-size: 1em;
         /* text-transform: uppercase; */
-        margin: 25px auto 0;
+        margin: 0px auto 0;
         text-align: center;
         padding: 15px;
         border-radius: 8px;
@@ -995,6 +1152,7 @@ h6 {
             color: $liferay-primary;
             font-weight: 600;
             font-size: 2em;
+            line-height: 1;
         }
         small {
             font-size: 55%;
