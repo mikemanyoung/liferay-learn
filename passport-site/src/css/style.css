@@ -14,10 +14,12 @@ body {
   background: #fff;
   height: 100%;
   position: relative;
-  background-image: url(/images/Landing-Hero-01.svg);
-  background-size: 1000px;
-  background-repeat: no-repeat;
-  background-position: 90% 8%; }
+  /* Save it until promotion ends
+    background-image: url(/images/Landing-Hero-01.svg);
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    background-position: 80% 3%;
+    */ }
 
 a {
   color: #0B63CE;
@@ -185,11 +187,7 @@ h6 {
       margin-top: 0;
       padding-top: 0;
       padding-bottom: 0;
-      background: #fff;
-      -webkit-box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2);
-      -moz-box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2);
-      -ms-box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2);
-      box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2); }
+      background: #fff; }
       #fh5co-header .navbar-liferay {
         color: #0B63CE !important; }
       #fh5co-header #navbar li a {
@@ -212,6 +210,66 @@ h6 {
   #fh5co-header .navbar {
     padding-bottom: 0;
     margin-bottom: 0; }
+  #fh5co-header .navbar-promo {
+    float: right;
+    display: block;
+    color: #0B63CE;
+    margin: 21px 0 0 0;
+    font-size: 1.25em;
+    font-weight: 600;
+    visibility: hidden; }
+  #fh5co-header .navbar-promo-crossout {
+    float: right;
+    display: block;
+    color: #0B63CE;
+    margin: 15px 20px 0 20px;
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #737C7F;
+    position: relative;
+    visibility: hidden; }
+  #fh5co-header .navbar-promo-crossout:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 3px solid;
+    border-radius: 5px;
+    border-color: inherit;
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    visibility: hidden; }
+  #fh5co-header .navbar-button {
+    float: right;
+    display: block;
+    font-weight: 600;
+    color: white;
+    font-size: 1em;
+    margin: 10px 0 0 0;
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+    background: white;
+    border: 3px solid white;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -ms-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+    visibility: hidden; }
+  #fh5co-header .navbar-button:hover {
+    color: white;
+    border: white;
+    cursor: pointer;
+    box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+    visibility: hidden; }
+  #fh5co-header .navbar-button:active {
+    box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+    visibility: hidden; }
   #fh5co-header #navbar li a {
     font-family: "Source Sans Pro", Arial, sans-serif;
     color: rgba(255, 255, 255, 0.5);
@@ -269,14 +327,55 @@ h6 {
   #fh5co-header.navbar-fixed-top {
     position: fixed !important;
     background: #fff;
-    -webkit-box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2);
-    -moz-box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2);
-    -ms-box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2);
-    box-shadow: 0 2px 6px rgba(62, 28, 20, 0.2);
     margin-top: 0px;
     top: 0; }
     #fh5co-header.navbar-fixed-top .navbar-liferay {
       color: #0B63CE; }
+    #fh5co-header.navbar-fixed-top .navbar-promo {
+      float: right;
+      display: block;
+      color: #0B63CE;
+      margin: 22px 10px 0 0;
+      font-size: 1em;
+      font-weight: 600;
+      visibility: visible; }
+    #fh5co-header.navbar-fixed-top .navbar-promo-crossout {
+      float: right;
+      display: block;
+      margin: 22px 10px 0 0;
+      font-size: 1em;
+      font-weight: 600;
+      color: #737C7F;
+      opacity: .75;
+      visibility: visible;
+      text-decoration: line-through; }
+    #fh5co-header.navbar-fixed-top .navbar-button {
+      float: right;
+      display: block;
+      font-weight: 600;
+      color: #0B63CE;
+      font-size: 1em;
+      margin: 10px 0 0 0;
+      text-align: center;
+      padding: 5px;
+      border-radius: 8px;
+      background: white;
+      border: 3px solid #0B63CE;
+      visibility: visible; }
+    #fh5co-header.navbar-fixed-top .navbar-button:hover {
+      color: #1B324B;
+      border: 3px solid #1B324B;
+      cursor: pointer;
+      box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+      visibility: visible;
+      -webkit-transition: all 0.4s ease-in-out 0s;
+      -moz-transition: all 0.4s ease-in-out 0s;
+      -ms-transition: all 0.4s ease-in-out 0s;
+      -o-transition: all 0.4s ease-in-out 0s;
+      transition: all 0.4s ease-in-out 0s; }
+    #fh5co-header.navbar-fixed-top .navbar-button:active {
+      box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+      visibility: visible; }
     #fh5co-header.navbar-fixed-top #navbar li a {
       color: rgba(0, 0, 0, 0.5);
       -webkit-transition: 0.3s;
@@ -318,25 +417,40 @@ h6 {
     -o-transition: 0s;
     transition: 0s; }
 
-#fh5co-promotion {
-  background-attachment: fixed;
+/* Promo Home */
+#fh5co-home {
+  background-size: cover;
   position: relative;
   width: 100%;
-  text-align: center;
   color: #fff;
   overflow: hidden;
-  background-color: #0B63CE;
-  height: 325px; }
-  #fh5co-promotion .text-wrap {
+  background: #0072ff;
+  background: -moz-linear-gradient(0deg, #0072ff 0%, #00c6ff 100%);
+  background: -webkit-linear-gradient(0deg, #0072ff 0%, #00c6ff 100%);
+  background: linear-gradient(0deg, #0072ff 0%, #00c6ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0072ff", endColorstr="#00c6ff", GradientType=1); }
+  #fh5co-home .promo-background {
+    background-image: url(/images/Clouds.svg);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: 40% 50%; }
+  #fh5co-home .text-wrap {
+    height: 650px; }
+  #fh5co-home .text-wrap {
     display: table;
     width: 100%;
     position: relative;
     z-index: 4; }
-  #fh5co-promotion .text-inner {
+  #fh5co-home .text-inner {
     display: table-cell;
-    vertical-align: middle;
-    padding-top: 90px; }
-    #fh5co-promotion .text-inner button {
+    text-align: left;
+    margin-left: 0;
+    padding-top: 175px;
+    background-image: url(/images/Promo-Hero.svg);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: 50%; }
+    #fh5co-home .text-inner button {
       font-weight: 600;
       color: #0B63CE;
       font-size: 1em;
@@ -352,82 +466,18 @@ h6 {
       -ms-transition: all 0.4s ease-in-out 0s;
       -o-transition: all 0.4s ease-in-out 0s;
       transition: all 0.4s ease-in-out 0s; }
-    #fh5co-promotion .text-inner button:hover {
-      background-color: #1B324B;
-      color: white;
+    #fh5co-home .text-inner button:hover {
+      background-color: #0B63CE;
+      color: #fff;
       cursor: pointer;
       transform: translateY(-7px);
       box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8); }
-    #fh5co-promotion .text-inner button:active {
+    #fh5co-home .text-inner button:active {
       transform: translateY(-7px);
       box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8); }
-    #fh5co-promotion .text-inner h1 {
-      font-size: calc(1.2vw + 1.2vh + 1.2vmin);
-      color: #fff;
-      margin: 10px 0 20px 0;
-      font-weight: 700;
-      text-transform: uppercase;
-      max-width: 1150px; }
-    #fh5co-promotion .text-inner h2 {
-      font-size: 1.75em;
-      line-height: 38px;
-      font-weight: 400;
-      color: #647480; }
-    #fh5co-promotion .text-inner h3 {
-      color: #fff;
-      margin-top: 28px;
-      font-size: calc(.7vw + .7vh + .7vmin); }
-    #fh5co-promotion .text-inner img {
-      max-width: 225px;
-      left: 1px;
-      z-index: 1px;
-      top: auto;
-      bottom: 1px; }
-  #fh5co-promotion .heading {
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    clear: none; }
-    #fh5co-promotion .heading h2 {
-      font-size: 2.25em;
-      font-weight: 600;
-      color: #09101d; }
-      #fh5co-promotion .heading h2.left-border:after {
-        display: none; }
-    #fh5co-promotion .heading h3 {
-      font-weight: 400; }
-
-#fh5co-home {
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-  width: 100%;
-  color: #fff;
-  overflow: hidden; }
-  #fh5co-home .text-wrap {
-    height: 750px; }
-  #fh5co-home .text-wrap {
-    display: table;
-    width: 100%;
-    position: relative;
-    z-index: 4; }
-  #fh5co-home .text-inner {
-    display: table-cell;
-    text-align: left;
-    margin-left: 0;
-    padding-top: 120px; }
-    #fh5co-home .text-inner a {
-      color: rgba(100, 116, 128, 0.5);
-      border-bottom: 2px dashed rgba(9, 16, 29, 0.5);
-      -webkit-transition: 0.5s;
-      -o-transition: 0.5s;
-      transition: 0.5s; }
-      #fh5co-home .text-inner a:hover, #fh5co-home .text-inner a:active, #fh5co-home .text-inner a:focus {
-        text-decoration: none;
-        color: #647480;
-        border-bottom: 2px dashed #09101d; }
     #fh5co-home .text-inner h1 {
-      font-size: 3em;
-      color: #09101d;
+      font-size: 2em;
+      color: #fff;
       margin: 0 0 20px 0;
       font-weight: 600; }
     #fh5co-home .text-inner h2 {
@@ -438,11 +488,95 @@ h6 {
       margin: 0; }
     #fh5co-home .text-inner h3 {
       padding-top: 25px; }
+    #fh5co-home .text-inner h4 {
+      text-transform: uppercase;
+      color: #78FBFF;
+      font-weight: 600; }
+    #fh5co-home .text-inner small {
+      font-size: 50%;
+      opacity: .75;
+      color: #fff; }
+    #fh5co-home .text-inner span {
+      text-decoration: line-through; }
 
+/* Disable Until Promo Ends
+#fh5co-home {
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    width: 100%;
+    color: #fff;
+    overflow: hidden;
+
+    .text-wrap {
+        height: 650px;
+    }
+    .text-wrap {
+        display: table;
+        width: 100%;
+        position: relative;
+        z-index: 4;
+    }
+    .text-inner {
+        display: table-cell;
+        text-align: left;
+        margin-left: 0;
+        padding-top: 120px;
+        button {
+            font-weight: 600;
+            color: $liferay-white;
+            font-size: 1em;
+            margin: 0px auto 0;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: $liferay-primary;
+            border: none;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            -ms-transition: all 0.4s ease-in-out 0s;
+            -o-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+
+        button:hover {
+            background-color: #1B324B;
+            color: white;
+            cursor: pointer;
+            transform: translateY( -7px);
+            box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+        }
+
+        button:active {
+            transform: translateY( -7px);
+            box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+        }
+
+        h1 {
+            font-size: 3em;
+            color: $liferay-h1;
+            margin: 0 0 20px 0;
+            font-weight: 600;
+        }
+        h2 {
+            font-size: 1.75em;
+            line-height: 38px;
+            font-weight: 400;
+            color: $liferay-h2;
+            margin: 0;
+        }
+        h3 {
+            padding-top: 25px;
+        }
+    }
+}
+
+*/
 #fh5co-intro {
   position: relative;
   bottom: 0;
-  z-index: 10; }
+  z-index: 10;
+  padding-top: 4em; }
   @media screen and (max-width: 768px) {
     #fh5co-intro {
       padding-bottom: 3em; } }
@@ -475,7 +609,7 @@ h6 {
     #fh5co-intro .fh5co-block > .overlay-darker {
       z-index: 8;
       opacity: 1;
-      background: #0B63CE;
+      background: #fff;
       position: absolute;
       left: 0;
       right: 0;
@@ -518,29 +652,13 @@ h6 {
     #fh5co-intro .fh5co-block p {
       color: #09101d;
       font-weight: 400; }
-    #fh5co-intro .fh5co-block:hover > .overlay, #fh5co-intro .fh5co-block:focus > .overlay {
-      opacity: 0;
-      z-index: 9; }
-    #fh5co-intro .fh5co-block:hover > .fh5co-text, #fh5co-intro .fh5co-block:focus > .fh5co-text {
-      color: #fff; }
-      #fh5co-intro .fh5co-block:hover > .fh5co-text .fh5co-intro-icon, #fh5co-intro .fh5co-block:focus > .fh5co-text .fh5co-intro-icon {
-        color: #fff; }
-    #fh5co-intro .fh5co-block:hover h2, #fh5co-intro .fh5co-block:focus h2 {
-      color: #fff; }
-    #fh5co-intro .fh5co-block:hover p, #fh5co-intro .fh5co-block:focus p {
-      color: #fff; }
-    #fh5co-intro .fh5co-block:hover .btn, #fh5co-intro .fh5co-block:focus .btn {
-      border: 2px solid #fff !important;
-      background: transparent; }
-      #fh5co-intro .fh5co-block:hover .btn:hover, #fh5co-intro .fh5co-block:focus .btn:hover {
-        background: #0B63CE !important;
-        border: 2px solid #0B63CE !important; }
 
 .watch-video {
   text-align: center;
   width: 100%;
   display: block;
-  float: left; }
+  float: left;
+  padding-top: 100px; }
   .watch-video span {
     display: block;
     margin-bottom: 20px;
@@ -600,12 +718,12 @@ h6 {
 #fh5co-benefits,
 #fh5co-work,
 #fh5co-counters {
-  padding: 4em 0; }
+  padding: 2em 0; }
   @media screen and (max-width: 768px) {
     #fh5co-benefits,
     #fh5co-work,
     #fh5co-counters {
-      padding: 4em 0; } }
+      padding: 2em 0; } }
 
 #fh5co-benefits {
   background-color: #0B63CE;
@@ -637,9 +755,8 @@ h6 {
   #fh5co-benefits p {
     text-align: center; }
   #fh5co-benefits .icon {
-    font-size: 70px;
     margin-bottom: 30px;
-    max-height: 200px;
+    max-height: 150px;
     display: -moz-inline-stack;
     display: inline-block;
     zoom: 1;
@@ -668,9 +785,55 @@ h6 {
   @media screen and (max-width: 768px) {
     #fh5co-counters {
       padding: 4em 0; } }
+  #fh5co-counters select {
+    font-size: 1.2em;
+    text-align-last: center;
+    font-weight: 600;
+    color: #444;
+    border: none;
+    border-bottom: 2px solid #D5D6D8;
+    border-radius: 2px;
+    min-width: 220px;
+    padding-bottom: 5px;
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    outline: none !important;
+    background-image: url(/images/dropdown-normal.svg);
+    background-repeat: no-repeat;
+    background-position: 195px center;
+    background-size: .7em; }
+  #fh5co-counters select:hover {
+    cursor: pointer;
+    background-image: url(/images/dropdown-hover.svg);
+    border-bottom: 2px solid #444;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -ms-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s; }
+  #fh5co-counters option {
+    background-color: white;
+    color: #444;
+    text-align-last: center;
+    font-weight: 400;
+    font-size: .8em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    outline: none !important; }
+  #fh5co-counters option:hover {
+    background-color: #e8e8e8;
+    color: #444;
+    text-align-last: center; }
+  #fh5co-counters .local-price {
+    display: none;
+    margin-top: 30px; }
   #fh5co-counters .price-crossout {
     font-size: 55%;
-    margin-right: 10px;
+    margin-left: 5px;
     color: #737C7F;
     position: relative; }
   #fh5co-counters .price-crossout:before {
@@ -693,7 +856,7 @@ h6 {
     color: white;
     font-size: 1em;
     /* text-transform: uppercase; */
-    margin: 25px auto 0;
+    margin: 0px auto 0;
     text-align: center;
     padding: 15px;
     border-radius: 8px;
@@ -755,7 +918,8 @@ h6 {
     #fh5co-counters .section-heading h3 {
       color: #0B63CE;
       font-weight: 600;
-      font-size: 2em; }
+      font-size: 2em;
+      line-height: 1; }
     #fh5co-counters .section-heading small {
       font-size: 55%;
       color: #737C7F; }

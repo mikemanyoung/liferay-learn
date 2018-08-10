@@ -33,31 +33,22 @@
 <body>
     <header role="banner" id="fh5co-header">
         <div class="container">
-            <!-- <div class="row"> -->
+            <!-- Nav Bar -->
             <nav class="navbar navbar-default">
                 <div class="navbar-header">
                     <a class="navbar-liferay" href="#"><img class="liferay-logo" src="images/logo.png" width="132px"></a>
                 </div>
+                <div class="class=" nav navbar-nav navbar-right "">
+                    <a href="#price"><button class="navbar-button">Learn More</button></a>
+                    <h1 class="navbar-promo">$2,500</h1>
+                    <h1 class="navbar-promo-crossout">$3,500</h1>
+                    <h1 class="navbar-promo"><i class="far fa-clock"></i>Limited Time Offer</h1>
+
+                </div>
         </div>
     </header>
-    <section id="fh5co-promotion">
-        <div class="container">
-            <div class="text-wrap">
-                <div class="text-inner">
-                    <div class="row">
-                        <div class="col-md-8 col-sm-8 col-xxs-8 heading text-left">
-                            <h1 class="promo-text-container"><i class="far fa-clock"></i> Limited Time Only</h1>
-                            <h3>Take advantage of Liferay University's launch sale.</h3>
-                            <a href="http://passport.liferay.com" target="_blank"><button>Purchase Now for $2,500</button></a>
-                        </div>
-                        <div class="col-md-4 col-sm-4  col-xxs-4 heading">
-                        <img src="images/Discount.svg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+    <!-- Hero 
     <section id="fh5co-home">
         <div class="container">
             <div class="text-wrap">
@@ -66,7 +57,28 @@
                         <div class="col-md-8 col-md-offset-0">
                             <h1 class="to-animate">Liferay University Passport </h1>
                             <h2 class="to-animate">Your all access pass to on demand training for all Liferay course offerings.</h2>
-                            <!--<h3 class="to-animate"><a class="text-gap" href="http://passport.liferay.com" target="_blank">Purchase Liferay Passport</a></h3> -->
+                            <h3 class="to-animate"><a class="text-gap" href="http://passport.liferay.com" target="_blank"><button>Purchase Liferay Passport</button></a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+
+    <!-- Promotional Hero -->
+    <section id="fh5co-home">
+        <div class="promo-background">
+            <div class="container">
+                <div class="text-wrap">
+                    <div class="text-inner">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-8 col-md-offset-0">
+                                <h4 class="to-animate">Limited Time Offer</h2>
+                                    <h1 class="to-animate">Liferay University Passport Launch Exclusive</h1>
+                                    <h1 class="to-animate">$2,500 <small> was <span>$3,500</span></small></h1>
+                                    <h3 class="to-animate"><a class="text-gap" href="http://passport.liferay.com" target="_blank"><button>Purchase Now</button></a></h3>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -74,6 +86,7 @@
         </div>
     </section>
 
+    <!-- Info -->
     <section id="fh5co-intro">
         <div class="container">
             <div class="row row-bottom-padded-lg">
@@ -105,18 +118,27 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Ad Video
+            <!--
+                <div class="fh5co-block to-animate">
+                    <div class="overlay-darker"></div>
+                    <div class="overlay"></div>
+                    <div class="fh5co-text">
+                        <i class="fh5co-intro-icon fab fa-youtube"></i>
+                        <h2>Video Classroom</h2>
+                        <p>Learn by seeing. Watch exercises completed in real-time.</p>
+                    </div>
+                </div>
+            </div>
+            -->
+            <!-- Video 
             <div class="row watch-video text-center to-animate">
-                <span class="video-message">[ REMOVE THIS SECTION ] Message from Us</span>
-
+                <span class="video-message">Message from Us</span>
                 <a href="https://liferay.wistia.com/medias/kqdftfwqe8" class="popup-vimeo btn-video"><i class="fas fa-play"></i></a>
             </div>
             -->
-
         </div>
     </section>
-
+    <!-- Benefits -->
     <div class="benefits-lego-top"></div>
 
     <section id="fh5co-benefits">
@@ -132,25 +154,18 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 col-sm-6 fh5co-benefit to-animate">
+                <div class="col-md-4 col-sm-4 fh5co-benefit to-animate">
                     <img src="images/money.svg" class="icon to-animate-2">
                     <h3>Cost Savings</h3>
                     <p>No travel costs.</p>
                 </div>
-                <div class="col-md-6 col-sm-6 fh5co-benefit to-animate">
-                    <img src="images/Productive.svg" class="icon to-animate-2">
-                    <h3>Productivity & Flexibility</h3>
-                    <p>Stay focused on project, and learn as you go.</p>
-                </div>
 
-                <div class="clearfix visible-sm-block"></div>
-
-                <div class="col-md-6 col-sm-6 fh5co-benefit to-animate">
+                <div class="col-md-4 col-sm-4 fh5co-benefit to-animate">
                     <img src="images/Continue.svg" class="icon to-animate-2">
                     <h3>Continuous Learning</h3>
                     <p>Refresh your skills, and get access to exclusive, high quality online resources.</p>
                 </div>
-                <div class="col-md-6 col-sm-6 fh5co-benefit to-animate">
+                <div class="col-md-4 col-sm-4 fh5co-benefit to-animate">
                     <img src="images/Laptop.svg" class="icon to-animate-2">
                     <h3>Remote Workforce</h3>
                     <p>Get on demand training for team members across all time zones and locations.</p>
@@ -162,6 +177,7 @@
 
     <div class="benefits-lego-bottom"></div>
 
+    <!-- Trainers -->
     <section id="fh5co-about">
         <div class="container">
             <div class="row">
@@ -191,15 +207,15 @@
                     <div class="fh5co-person text-center to-animate">
                         <figure><img src="images/Brandon-P.png" alt="Image"></figure>
                         <h3>Brandon Pettit</h3>
-                        <span class="fh5co-position">Sr. Curriculum Developer</span>
-                        <p>Brandon Pettit joined the Liferay team in 2012. Since then, he's contributed to both training delivery and the development of course curriculum before becoming the Project Manager of the Curriculum team. He enjoys serving others through Liferay education. When not working, he can be found reading, taking a walk, or playing his favorite Nintendo games.</p>
+                        <span class="fh5co-position">Lead Curriculum Developer</span>
+                        <p>Brandon Pettit joined the Liferay team in 2012. Since then, he's contributed to both training delivery and the development of Liferay's official course offerings. He enjoys serving others through Liferay education. When not working, he can be found reading, taking a walk, or playing his favorite Nintendo games.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
+    <!-- Courses -->
     <div class="work-lego-top"></div>
 
     <section id="fh5co-work">
@@ -216,24 +232,6 @@
                 </div>
             </div>
             <div class="row row-bottom-padded-sm">
-                <div class="col-md-4 col-sm-6 col-xxs-12">
-                    <a href="https://university.liferay.com/osgi-basics" class="fh5co-project-item image-popup to-animate">
-						<img src="images/OSGi-Tile-Ad.png" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>OSGi Basics</h2>
-						<span>Lesson</span>
-						</div>
-					</a>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xxs-12">
-                    <a href="https://university.liferay.com/mobile-development" class="fh5co-project-item image-popup to-animate">
-						<img src="images/Mobile-Dev-Tile-Ad.png" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Mobile Development</h2>
-						<span>Lesson</span>
-						</div>
-					</a>
-                </div>
 
                 <div class="clearfix visible-sm-block"></div>
 
@@ -246,17 +244,6 @@
 						</div>
 					</a>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xxs-12">
-                    <a href="https://university.liferay.com/digital-asset-management" class="fh5co-project-item image-popup to-animate">
-						<img src="images/DAM-Tile-Ad.png" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Digital Asset Management</h2>
-						<span>Lesson</span>
-						</div>
-					</a>
-                </div>
-
-                <div class="clearfix visible-sm-block"></div>
 
                 <div class="col-md-4 col-sm-6 col-xxs-12">
                     <a href="https://university.liferay.com/liferay-fundamentals" class="fh5co-project-item image-popup to-animate">
@@ -267,6 +254,8 @@
 						</div>
 					</a>
                 </div>
+                <div class="clearfix visible-sm-block"></div>
+
                 <div class="col-md-4 col-sm-6 col-xxs-12">
                     <a href="https://university.liferay.com/content-management" class="fh5co-project-item image-popup to-animate">
 						<img src="images/Content-Manage-Tile-Ad.png" alt="Image" class="img-responsive">
@@ -277,8 +266,6 @@
 					</a>
                 </div>
 
-                <div class="clearfix visible-sm-block"></div>
-
                 <div class="col-md-4 col-sm-6 col-xxs-12">
                     <a href="https://university.liferay.com/back-end-development" class="fh5co-project-item image-popup to-animate">
 						<img src="images/Back-End-Tile-Ad.png" alt="Image" class="img-responsive">
@@ -288,6 +275,9 @@
 						</div>
 					</a>
                 </div>
+
+                <div class="clearfix visible-sm-block"></div>
+
                 <div class="col-md-4 col-sm-6 col-xxs-12">
                     <a href="https://university.liferay.com/front-end-development" class="fh5co-project-item image-popup to-animate">
 						<img src="images/Front-End-Tile-Ad.png" alt="Image" class="img-responsive">
@@ -298,8 +288,6 @@
 					</a>
                 </div>
 
-                <div class="clearfix visible-sm-block"></div>
-
                 <div class="col-md-4 col-sm-6 col-xxs-12">
                     <a href="#" class="fh5co-project-item image-popup to-animate">
 						<img src="images/Foundational.png" alt="Image" class="img-responsive">
@@ -309,6 +297,7 @@
 						</div>
 					</a>
                 </div>
+
             </div>
         </div>
     </section>
@@ -398,10 +387,48 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 section-heading text-center to-animate">
-                    <h2 class="to-animate">For a Limited Time Only</h1>
-                        <p class="to-animate">Hurry now to take advantage of the Liferay University launch, available for a limited time only.</p>
-                        <h3 class="to-animate"><span class="price-crossout">$3,500</span>$2,500<small> / per user for one year</small></h3>
-                        <a href="https://passport.liferay.com/"><button class="to-animate">Buy Now</button></a>
+                    <h2 class="to-animate">Limited Time Only</h1>
+                    <p class="to-animate">Save <span class="pass-price">$1,000</span> on a full year of access to all of our courses.</p>
+
+                        <!-- Promotional-Price -->
+                        <div class="select-wrapper">
+                    <select id="localization" class="country-dropdown">
+                        <option selected>United-States</option>
+                        <option>Australia</option>
+                        <option>China</option>
+                        <option>Europe</option>
+                        <option>Great-Britain</option>
+                        <option>India</option>
+                        <option>Japan</option>
+                        <option>Singapore</option>
+                        </select>
+                        </div>
+                        
+                        <div id="United-States" class="local-price">
+                            <h3 class="to-animate"><span class="price-crossout">$3,500</span>$2,500<small> / per user for one year</small></h3>
+                        </div>
+                        <div id="Australia" class="local-price">
+                            <h3 class="to-animate"><span class="price-crossout">A$4,700</span>A$3,300<small> / per user for one year</small></h3>
+                        </div>
+                        <div id="China" class="local-price">
+                            <h3 class="to-animate"><span class="price-crossout">￥23,000</span>￥16,500<small> / per user for one year</small></h3>
+                        </div>
+                        <div id="Europe" class="local-price">
+                            <h3 class="to-animate"><span class="price-crossout">€3,500</span>€2,500<small> / per user for one year</small></h3>
+                        </div>
+                        <div id="Great-Britain" class="local-price">
+                            <h3 class="to-animate"><span class="price-crossout">£2,800</span>£2,000<small> / per user for one year</small></h3>
+                        </div>
+                        <div id="India" class="local-price">
+                            <h3 class="to-animate"><span class="price-crossout">₹234,000</span>₹167,000<small> / per user for one year</small></h3>
+                        </div>
+                        <div id="Japan" class="local-price">
+                            <h3 class="to-animate"><span class="price-crossout">¥438,000</span>¥313,000<small> / per user for one year</small></h3>
+                        </div>
+                        <div id="Singapore" class="local-price">
+                            <h3 class="to-animate"><span class="price-crossout">S$4,700</span>S$3,300<small> / per user for one year</small></h3>
+                        </div>
+                        <a href="https://passport.liferay.com/"><button class="to-animate">Purchase Now</button></a>
                 </div>
             </div>
         </div>
