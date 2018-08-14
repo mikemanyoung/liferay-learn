@@ -67,3 +67,8 @@ a.coursebox-container.course .coursebox-text-description {
         background-image: none;
     }
 }
+@media screen and (max-width: 1213px) {
+    .sj-page-catalog .catalog-header .catalog-hero {
+        background-size: 50%;
+    }
+}
