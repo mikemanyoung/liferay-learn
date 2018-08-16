@@ -5,7 +5,6 @@ html {
 }
 
 
-
 /* Logo Style */
 
 #header .header-center-img {
@@ -393,6 +392,12 @@ button.btn-sm,
 .btn-primary.btn-sm {
     font-size: 20px !important;
     padding: 15px !important;
+}
+
+.purchase-button[disabled] {
+  opacity: .4;
+  cursor: default !important;
+  pointer-events: none;
 }
 
 

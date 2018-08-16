@@ -1,20 +1,30 @@
 function cueCoursePurchase() {
   var purchaseButtonPrice = $(".purchase-button-price").html();
 
-  if (purchaseButtonPrice !== null && purchaseButtonPrice.indexOf("FREE") == -1) {
-    $('.purchase-button').click(function(e) {
-      e.preventDefault();
-      $('#terms-modal').show();
-    })
-
-    $('.btn-okay').click(function() {
-      window.location.href = $('.purchase-button').attr('href');
-    })
-
-    $('.btn-cancel').click(function() {
-      $('#terms-modal').hide();
-    })
+  if (purchaseButtonPrice === null || purchaseButtonPrice.indexOf("FREE") >= 0) {
+    return;
   }
+
+  $.getJSON('https://ipapi.co/json', function(data) {
+    if (data.country !== 'US') {
+      $(".purchase-button").attr("disabled", "disabled");
+
+      return;
+    }      
+  });
+
+  $('.purchase-button').click(function(e) {
+    e.preventDefault();
+    $('#terms-modal').show();
+  })
+
+  $('.btn-okay').click(function() {
+    window.location.href = $('.purchase-button').attr('href');
+  })
+
+  $('.btn-cancel').click(function() {
+    $('#terms-modal').hide();
+  })
 }
 
 function cueDropShadow() {
