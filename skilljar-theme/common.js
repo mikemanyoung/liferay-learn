@@ -86,11 +86,15 @@ function cuePassportPurchase() {
   $('label[for="id_domain_access_signup_flow_1"]').contents().last()[0].textContent='Purchase a Liferay University Passport.';
 
   // Validation for continue button
-  $('#id_custom_24zitnekfjb34').click(function () {
-    $('#login-content .sj-text-continue').prop("disabled", !$("#id_custom_24zitnekfjb34").prop("checked")); 
-  })
-  
-  $('#login-content .sj-text-continue').attr("disabled","disabled"); 
+  if ($('#id_custom_24zitnekfjb34').length) {
+    console.log("here!");
+    $('#id_custom_24zitnekfjb34').click(function () {
+      $('#login-content .sj-text-continue').prop("disabled", !$("#id_custom_24zitnekfjb34").prop("checked")); 
+    })
+
+    $('#login-content .sj-text-continue').attr("disabled","disabled"); 
+  }
+    
   $('#login-content .sj-text-continue').attr('value','Agree and Continue'); 
 
   $("<div class='signup-hero'></div>").insertBefore('#login-content');
