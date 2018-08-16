@@ -8,7 +8,6 @@ function cueCoursePurchase() {
   $.getJSON('https://ipapi.co/json', function(data) {
     if (data.country !== 'US') {
       $(".purchase-button").attr("disabled", "disabled");
-      $("<p>Contact <a href='mailto:sales@liferay.com'>sales@liferay.com</a> to purchase this course.</p>").insertAfter(".purchase-button");
       return;
     }      
   });
