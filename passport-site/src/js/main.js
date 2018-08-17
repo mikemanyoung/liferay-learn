@@ -506,6 +506,18 @@ $("a[href='#price']").click(function() {
   return false;
 });
 
+$(function () {
+  $('.local-price').hide();
+  $('.l1').show();
+    
+  $('#localization').on("change",function () {
+    $('.local-price').hide();
+    $('.l'+$(this).val()).show();
+  });
+});
+
+
+
 
 
 }());
