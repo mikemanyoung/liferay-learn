@@ -796,7 +796,7 @@ button {
     border: none;
     border-bottom: 2px solid #D5D6D8;
     border-radius: 2px;
-    min-width: 260px;
+    min-width: 220px;
     padding-bottom: 5px;
     /* for Firefox */
     -moz-appearance: none;
@@ -807,7 +807,7 @@ button {
     outline: none !important;
     background-image: url(/images/dropdown-normal.svg);
     background-repeat: no-repeat;
-    background-position: 235px center;
+    background-position: 195px center;
     background-size: .7em; }
   #fh5co-counters select:hover {
     cursor: pointer;
