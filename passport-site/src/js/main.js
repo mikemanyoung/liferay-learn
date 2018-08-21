@@ -468,9 +468,6 @@
         }
     };
 
-
-
-
     // Document on load.
     $(function() {
 
@@ -497,16 +494,7 @@
         countersAnimate();
         contactAnimate();
         pricingAnimate();
-
-
     });
-
-
-    $("a[href='#price']").click(function() {
-        $("html, body").animate({ scrollTop: $(document).height() }, "slow");
-        return false;
-    });
-
 
     // regional pricing dropdown
     var currencies = {
@@ -551,28 +539,48 @@
     var updateCurrencies = function(currencyCode) {
         $(".listPrice").html(currencies[currencyCode].listPrice);
         $(".promoPrice").html(currencies[currencyCode].promoPrice);
+
         if (currencyCode == 'USD' || currencyCode == 'ALT_USD') {
             $(".passportButton").show();
             $(".passportLink").css('display', 'none');
-        } else {
+        } 
+        else {
             $(".passportLink").show();
             $(".passportButton").css('display', 'none');
         }
     }
 
-    $('#localization').on("change", function() {
-        var currencyCode = $(this).find("option:selected").attr('currencyCode');
-        updateCurrencies(currencyCode);
-    });
+    var learnMore = function() {
+	    $("a[href='#learn-more']").click(function() {
+	        $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+	        return false;
+	    });
+    }
 
-    // regional pricing
-    $.getJSON('https://ipapi.co/json/', function(data) {
-        var option = $("#localization option[value= '" + data.country + "']");
-        option.attr('selected', 'selected');
+    var regionSelector = function() {
+	    $('#localization').on("change", function() {
+	        var currencyCode = $(this).find("option:selected").attr('currencyCode');
+	        updateCurrencies(currencyCode);
+	    });
+    }
 
-        var currencyCode = option.attr('currencyCode');
+    var autodetectRegion = function() {
+	    // regional pricing
+	    $.getJSON('https://ipapi.co/json', function(data) {
+	        var option = $("#localization option[value='" + data.country + "']");
+	        option.attr('selected', 'selected');
 
-        updateCurrencies(currencyCode);
-    });
+	        var currencyCode = option.attr('currencyCode');
+
+	        updateCurrencies(currencyCode);
+	    });
+    }
+
+    // Document on load.
+    $(function() {
+    	learnMore();
+    	regionSelector();
+    	autodetectRegion();
+	})
 
 }());
