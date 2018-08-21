@@ -38,8 +38,8 @@
                     <a href="#price">
                         <button class="navbar-button">Learn More</button>
                     </a>
-                    <h1 class="navbar-promo">$2,500</h1>
-                    <h1 class="navbar-promo-crossout">$3,500</h1>
+                    <h1 class="navbar-promo promoPrice">$2,500</h1>
+                    <h1 class="navbar-promo-crossout listPrice">$3,500</h1>
                     <h1 class="navbar-promo"><i class="far fa-clock"></i>Limited Time Offer</h1>
                 </div>
         </div>
@@ -71,7 +71,7 @@
                             <div class="col-lg-6 col-md-6 col-sm-8 col-md-offset-0">
                                 <h4 class="to-animate">Limited Time Offer</h2>
                                     <h1 class="to-animate">Liferay University Passport Launch Exclusive</h1>
-                                    <h1 class="to-animate">$2,500 <small> was <span>$3,500</span></small></h1>
+                                    <h1 class="to-animate"><span class="promoPrice">$3,500</span> <small> was <span class="listPrice">$2,500</span></small></h1>
                                     <h3 class="to-animate"><a class="text-gap" href="http://passport.liferay.com" target="_blank"><button>Purchase Now</button></a></h3>
                             </div>
                         </div>
@@ -374,7 +374,7 @@
         </div>
     </section>
 -->
-  <!-- Promotional-Price -->
+    <!-- Promotional-Price -->
     <section id="fh5co-counters">
         <div class="fh5co-overlay"></div>
         <div class="container">
@@ -386,118 +386,88 @@
                         <!-- Promotional-Price -->
                         <div class="select-wrapper">
                             <select id="localization" class="country-dropdown">
-                                <option value="1">United States</option>
-                                <option value="4">Albania</option>
-                                <option value="1">Armenia</option>
-                                <option value="2">Australia</option>
-                                <option value="4">Austria</option>
-                                <option value="1">Azerbaijan</option>
-                                <option value="1">Bahrain</option>
-                                <option value="1">Belarus</option>
-                                <option value="4">Belgium</option>
-                                <option value="1">Brazil</option>
-                                <option value="1">Brunei</option>
-                                <option value="4">Bulgaria</option>
-                                <option value="1">Canada</option>
-                                <option value="3">China</option>
-                                <option value="4">Croatia</option>
-                                <option value="4">Czech Republic</option>
-                                <option value="4">Denmark</option>
-                                <option value="1">Egypt</option>
-                                <option value="4">Estonia</option>
-                                <option value="4">Finland</option>
-                                <option value="4">France</option>
-                                <option value="1">Georgia</option>
-                                <option value="4">Germany</option>
-                                <option value="4">Greece</option>
-                                <option value="1">Hong Kong</option>
-                                <option value="4">Hungary</option>
-                                <option value="6">India</option>
-                                <option value="1">Indonesia</option>
-                                <option value="1">Israel</option>
-                                <option value="4">Italy</option>
-                                <option value="7">Japan</option>
-                                <option value="1">Jordan</option>
-                                <option value="1">Kazakhstan</option>
-                                <option value="4">Kosovo</option>
-                                <option value="1">Kuwait</option>
-                                <option value="1">Kyrgyzstan</option>
-                                <option value="4">Latvia</option>
-                                <option value="1">Lebanon</option>
-                                <option value="4">Lithuania</option>
-                                <option value="4">Luxembourg</option>
-                                <option value="1">Macau</option>
-                                <option value="4">Macedonia</option>
-                                <option value="1">Malaysia</option>
-                                <option value="4">Malta</option>
-                                <option value="1">Mexico</option>
-                                <option value="4">Moldova</option>
-                                <option value="1">Morocco</option>
-                                <option value="4">Netherlands</option>
-                                <option value="2">New Zealand</option>
-                                <option value="1">Nigeria</option>
-                                <option value="4">Norway</option>
-                                <option value="1">Oman</option>
-                                <option value="1">Philippines</option>
-                                <option value="4">Poland</option>
-                                <option value="4">Portugal</option>
-                                <option value="1">Qatar</option>
-                                <option value="4">Romania</option>
-                                <option value="1">Russia</option>
-                                <option value="1">Saudi Arabia</option>
-                                <option value="4">Serbia</option>
-                                <option value="1">South Africa</option>
-                                <option value="1">South Korea</option>
-                                <option value="4">Spain</option>
-                                <option value="4">Sweden</option>
-                                <option value="4">Switzerland</option>
-                                <option value="1">Taiwan</option>
-                                <option value="1">Tajikistan</option>
-                                <option value="1">Thailand</option>
-                                <option value="1">Tunisia</option>
-                                <option value="4">Turkey</option>
-                                <option value="1">Turkmenistan</option>
-                                <option value="1">UAE</option>
-                                <option value="5">United Kingdom</option>
-                                <option value="1">Ukraine</option>
-                                <option value="1">Uzbekistan</option>
-                                <option value="1">Yemen</option>
-                                <option value="1">Other Countries</option>
+                                <option currencyCode="USD" value="US">United States</option>
+                                <option currencyCode="EUR" value="AL">Albania</option>
+                                <option currencyCode="ALT_USD" value="AM">Armenia</option>
+                                <option currencyCode="AUD" value="AU">Australia</option>
+                                <option currencyCode="EUR" value="AT">Austria</option>
+                                <option currencyCode="ALT_USD" value="AZ">Azerbaijan</option>
+                                <option currencyCode="ALT_USD" value="BH">Bahrain</option>
+                                <option currencyCode="ALT_USD" value="BY">Belarus</option>
+                                <option currencyCode="EUR" value="BE">Belgium</option>
+                                <option currencyCode="ALT_USD" value="BR">Brazil</option>
+                                <option currencyCode="ALT_USD" value="BN">Brunei</option>
+                                <option currencyCode="EUR" value="BG">Bulgaria</option>
+                                <option currencyCode="ALT_USD" value="CA">Canada</option>
+                                <option currencyCode="CNY" value="CN">China</option>
+                                <option currencyCode="EUR" value="HR">Croatia</option>
+                                <option currencyCode="EUR" value="CZ">Czech Republic</option>
+                                <option currencyCode="EUR" value="DK">Denmark</option>
+                                <option currencyCode="ALT_USD" value="EG">Egypt</option>
+                                <option currencyCode="EUR" value="EE">Estonia</option>
+                                <option currencyCode="EUR" value="FI">Finland</option>
+                                <option currencyCode="EUR" value="FR">France</option>
+                                <option currencyCode="ALT_USD" value="GE">Georgia</option>
+                                <option currencyCode="EUR" value="DE">Germany</option>
+                                <option currencyCode="EUR" value="GR">Greece</option>
+                                <option currencyCode="ALT_USD" value="HR">Hong Kong</option>
+                                <option currencyCode="EUR" value="HU">Hungary</option>
+                                <option currencyCode="INR" value="IN">India</option>
+                                <option currencyCode="ALT_USD" value="ID">Indonesia</option>
+                                <option currencyCode="ALT_USD" value="IL">Israel</option>
+                                <option currencyCode="EUR" value="IT">Italy</option>
+                                <option currencyCode="JPY" value="JP">Japan</option>
+                                <option currencyCode="ALT_USD" value="JO">Jordan</option>
+                                <option currencyCode="ALT_USD" value="KZ">Kazakhstan</option>
+                                <option currencyCode="EUR" value="XK">Kosovo</option>
+                                <option currencyCode="ALT_USD" value="KW">Kuwait</option>
+                                <option currencyCode="ALT_USD" value="KG">Kyrgyzstan</option>
+                                <option currencyCode="EUR" value=LV>Latvia</option>
+                                <option currencyCode="ALT_USD" value="LB">Lebanon</option>
+                                <option currencyCode="EUR" value="LT">Lithuania</option>
+                                <option currencyCode="EUR" value="LU">Luxembourg</option>
+                                <option currencyCode="ALT_USD" value="MO">Macau</option>
+                                <option currencyCode="EUR" value="MK">Macedonia</option>
+                                <option currencyCode="ALT_USD" value="MY">Malaysia</option>
+                                <option currencyCode="EUR" value="MT">Malta</option>
+                                <option currencyCode="ALT_USD" value="MX">Mexico</option>
+                                <option currencyCode="EUR" value="MD">Moldova</option>
+                                <option currencyCode="ALT_USD" value="MA">Morocco</option>
+                                <option currencyCode="EUR" value="NL">Netherlands</option>
+                                <option currencyCode="AUD" value="NZ">New Zealand</option>
+                                <option currencyCode="ALT_USD" value="NG">Nigeria</option>
+                                <option currencyCode="EUR" value="NO">Norway</option>
+                                <option currencyCode="ALT_USD" value="OM">Oman</option>
+                                <option currencyCode="ALT_USD" value="PH">Philippines</option>
+                                <option currencyCode="EUR" value="PL">Poland</option>
+                                <option currencyCode="EUR" value="PT">Portugal</option>
+                                <option currencyCode="ALT_USD" value="QA">Qatar</option>
+                                <option currencyCode="EUR" value="RO">Romania</option>
+                                <option currencyCode="ALT_USD" value="RU">Russia</option>
+                                <option currencyCode="ALT_USD" value="SA">Saudi Arabia</option>
+                                <option currencyCode="EUR" value="RS">Serbia</option>
+                                <option currencyCode="ALT_USD" value="ZA">South Africa</option>
+                                <option currencyCode="ALT_USD" value="KR">South Korea</option>
+                                <option currencyCode="EUR" value="ES">Spain</option>
+                                <option currencyCode="EUR" value="SE">Sweden</option>
+                                <option currencyCode="EUR" value="CH">Switzerland</option>
+                                <option currencyCode="ALT_USD" value="TW">Taiwan</option>
+                                <option currencyCode="ALT_USD" value="TJ">Tajikistan</option>
+                                <option currencyCode="ALT_USD" value="TH">Thailand</option>
+                                <option currencyCode="ALT_USD" value="TN">Tunisia</option>
+                                <option currencyCode="EUR" value="TR">Turkey</option>
+                                <option currencyCode="ALT_USD" value="TM">Turkmenistan</option>
+                                <option currencyCode="ALT_USD" value="UA">UAE</option>
+                                <option currencyCode="GBP" value="GB">United Kingdom</option>
+                                <option currencyCode="ALT_USD" value="UA">Ukraine</option>
+                                <option currencyCode="ALT_USD" value="UZ">Uzbekistan</option>
+                                <option currencyCode="ALT_USD" value="YE">Yemen</option>
+                                <option currencyCode="ALT_USD">Other Countries</option>
                         </select>
                         </div>
-                        <!--   price  -->
-                        <div id="USD" class="local-price l1">
-                            <h3 class="to-animate"><span class="price-crossout">$3,500</span>$2,500<small> / per user for one year</small></h3>
-                            <a href="https://passport.liferay.com/"><button class="to-animate">Purchase Now</button></a>
-                        </div>
-                        <div id="AUD" class="local-price l2">
-                            <h3 class="to-animate"><span class="price-crossout">A$4,700</span>A$3,300<small> / per user for one year</small></h3>
-                            <p class="to-animate">Please contact <a href='mailto:sales@liferay.com'>sales@liferay.com</a> to purchase this course.</p>
-                        </div>
-                        <div id="CNY" class="local-price l3">
-                            <h3 class="to-animate"><span class="price-crossout">￥23,000</span>￥16,500<small> / per user for one year</small></h3>
-                            <p class="to-animate">Please contact <a href='mailto:sales@liferay.com'>sales@liferay.com</a> to purchase this course.</p>
-                        </div>
-                        <div id="EUR" class="local-price l4">
-                            <h3 class="to-animate"><span class="price-crossout">€3,500</span>€2,500<small> / per user for one year</small></h3>
-                            <p class="to-animate">Please contact <a href='mailto:sales@liferay.com'>sales@liferay.com</a> to purchase this course.</p>
-                        </div>
-                        <div id="GBP" class="local-price l5">
-                            <h3 class="to-animate"><span class="price-crossout">£2,800</span>£2,000<small> / per user for one year</small></h3>
-                            <p class="to-animate">Please contact <a href='mailto:sales@liferay.com'>sales@liferay.com</a> to purchase this course.</p>
-                        </div>
-                        <div id="INR" class="local-price l6">
-                            <h3 class="to-animate"><span class="price-crossout">₹234,000</span>₹167,000<small> / per user for one year</small></h3>
-                            <p class="to-animate">Please contact <a href='mailto:sales@liferay.com'>sales@liferay.com</a> to purchase this course.</p>
-                        </div>
-                        <div id="JPY" class="local-price l7">
-                            <h3 class="to-animate"><span class="price-crossout">¥438,000</span>¥313,000<small> / per user for one year</small></h3>
-                            <p class="to-animate">Please contact <a href='mailto:sales@liferay.com'>sales@liferay.com</a> to purchase this course.</p>
-                        </div>
-                        <div id="SGD" class="local-price l8">
-                            <h3 class="to-animate"><span class="price-crossout">S$4,700</span>S$3,300<small> / per user for one year</small></h3>
-                            <p class="to-animate">Please contact <a href='mailto:sales@liferay.com'>sales@liferay.com</a> to purchase this course.</p>
-                        </div>
+                        <h3 class="to-animate mainPrice"><span class="price-crossout listPrice">$3,500</span><span class="promoPrice">$2,500</span><small> / per user for one year</small></h3>
+                        <a href="https://passport.liferay.com/"><button class="to-animate passportButton">Purchase Now</button></a>
+                        <p class="to-animate passportLink">Please contact <a href="mailto:sales@liferay.com">sales@liferay.com</a> to purchase the passport.</p>
                 </div>
             </div>
         </div>

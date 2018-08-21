@@ -1,7 +1,7 @@
 /* =======================================================
 *
-* 	Template Style 
-*	Edit this section
+*   Template Style 
+*   Edit this section
 *
 * ======================================================= */
 body {
@@ -43,9 +43,6 @@ h6 {
   font-family: "Source Sans Pro", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 30px 0; }
-
-button {
-  outline: none; }
 
 ::-webkit-selection {
   color: #A2AEB3;
@@ -499,7 +496,7 @@ button {
       font-size: 50%;
       opacity: .75;
       color: #fff; }
-    #fh5co-home .text-inner span {
+    #fh5co-home .text-inner .listPrice {
       text-decoration: line-through; }
 
 /* Disable Until Promo Ends
@@ -736,7 +733,7 @@ button {
   color: rgba(255, 255, 255, 0.7); }
   #fh5co-benefits:before, #fh5co-benefits:after {
     position: absolute;
-    background-color: #0B63CE;
+    background-color: transparent;
     content: "";
     z-index: 3;
     display: inline-block;
@@ -796,7 +793,7 @@ button {
     border: none;
     border-bottom: 2px solid #D5D6D8;
     border-radius: 2px;
-    min-width: 220px;
+    min-width: 260px;
     padding-bottom: 5px;
     /* for Firefox */
     -moz-appearance: none;
@@ -807,7 +804,7 @@ button {
     outline: none !important;
     background-image: url(/images/dropdown-normal.svg);
     background-repeat: no-repeat;
-    background-position: 195px center;
+    background-position: 235px center;
     background-size: .7em; }
   #fh5co-counters select:hover {
     cursor: pointer;
@@ -831,9 +828,6 @@ button {
     background-color: #e8e8e8;
     color: #444;
     text-align-last: center; }
-  #fh5co-counters .local-price {
-    display: none;
-    margin-top: 30px; }
   #fh5co-counters .price-crossout {
     font-size: 55%;
     margin-left: 5px;
@@ -853,6 +847,8 @@ button {
     -ms-transform: rotate(-5deg);
     -o-transform: rotate(-5deg);
     transform: rotate(-5deg); }
+  #fh5co-counters .section-heading {
+    margin-bottom: 0px; }
   #fh5co-counters button {
     height: auto;
     font-weight: 600;
@@ -922,7 +918,8 @@ button {
       color: #0B63CE;
       font-weight: 600;
       font-size: 2em;
-      line-height: 1; }
+      line-height: 1;
+      margin-top: 30px; }
     #fh5co-counters .section-heading small {
       font-size: 55%;
       color: #737C7F; }
@@ -1001,7 +998,7 @@ button {
       color: white; }
   #fh5co-work:before, #fh5co-work:after {
     position: absolute;
-    background-color: #1B324B;
+    background-color: transparent;
     content: "";
     z-index: 3;
     display: inline-block;

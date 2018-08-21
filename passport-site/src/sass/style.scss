@@ -168,8 +168,8 @@ $break-large: 1800px;
 
 /* =======================================================
 *
-* 	Template Style 
-*	Edit this section
+*   Template Style 
+*   Edit this section
 *
 * ======================================================= */
 
@@ -219,9 +219,6 @@ h6 {
     font-family: $font-primary;
     font-weight: 400;
     margin: 0 0 30px 0;
-}
-button{
-    outline: none;
 }
 
 ::-webkit-selection {
@@ -669,7 +666,7 @@ button{
             opacity: .75;
             color: $liferay-white;
         }
-        span {
+        .listPrice {
             text-decoration: line-through;
         }
     }
@@ -920,7 +917,9 @@ button{
     &:before,
     &:after {
         position: absolute;
-        background-color: $liferay-primary;
+
+        background-color: transparent;
+
         content: "";
         z-index: 3;
         display: inline-block;
@@ -993,7 +992,7 @@ button{
         border: none;
         border-bottom: 2px solid #D5D6D8;
         border-radius: 2px;
-        min-width: 220px;
+        min-width: 260px;
         padding-bottom: 5px;
         /* for Firefox */
         -moz-appearance: none;
@@ -1005,7 +1004,7 @@ button{
 
         background-image: url(/images/dropdown-normal.svg);
         background-repeat: no-repeat;
-        background-position: 195px center;
+        background-position: 235px center;
         background-size: .7em;
     }
     select:hover {
@@ -1035,11 +1034,6 @@ button{
         text-align-last: center;
     }
 
-    .local-price {
-        display: none;
-        margin-top: 30px;
-    }
-
     .price-crossout {
         font-size: 55%;
         margin-left: 5px;
@@ -1061,6 +1055,9 @@ button{
         -ms-transform: rotate(-5deg);
         -o-transform: rotate(-5deg);
         transform: rotate(-5deg);
+    }
+    .section-heading {
+        margin-bottom: 0px;
     }
 
     button {
@@ -1154,6 +1151,7 @@ button{
             font-weight: 600;
             font-size: 2em;
             line-height: 1;
+            margin-top: 30px;
         }
         small {
             font-size: 55%;
@@ -1254,7 +1252,7 @@ button{
     &:after {
         position: absolute;
 
-        background-color: #1B324B;
+        background-color: transparent;
 
         content: "";
         z-index: 3;
@@ -1624,22 +1622,3 @@ button{
     background-size: cover;
     width: 100%;
 }
-
-
-// #colour-variations li a {
-// 	width: 100%;
-// 	position: relative;
-// 	display: block;
-// 	overflow: hidden;
-// 	@include border-radius(4px);
-// 	@include transition(.4s);
-// 	&:hover {
-// 		opacity: .9;
-// 	}
-// 	> span {
-// 		width: 33.33%;
-// 		height: 20px;
-// 		float: left;
-// 		@include inline-block;
-// 	}
-// }
