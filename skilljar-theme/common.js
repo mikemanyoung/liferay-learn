@@ -87,7 +87,6 @@ function cuePassportPurchase() {
 
   // Validation for continue button
   if ($('#id_custom_24zitnekfjb34').length) {
-    console.log("here!");
     $('#id_custom_24zitnekfjb34').click(function () {
       $('#login-content .sj-text-continue').prop("disabled", !$("#id_custom_24zitnekfjb34").prop("checked")); 
     })
