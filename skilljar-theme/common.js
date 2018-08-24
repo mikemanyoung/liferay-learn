@@ -1,7 +1,7 @@
 function cueCoursePurchase() {
   var purchaseButtonPrice = $(".purchase-button-price").html();
 
-  if (purchaseButtonPrice === null || purchaseButtonPrice.indexOf("FREE") >= 0) {
+  if (!purchaseButtonPrice || purchaseButtonPrice.indexOf("FREE") >= 0) {
     return;
   }
 
