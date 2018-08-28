@@ -801,14 +801,9 @@ h6 {
     -webkit-appearance: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    outline: none !important;
-    background-image: url(/images/dropdown-normal.svg);
-    background-repeat: no-repeat;
-    background-position: 235px center;
-    background-size: .7em; }
+    outline: none !important; }
   #fh5co-counters select:hover {
     cursor: pointer;
-    background-image: url(/images/dropdown-hover.svg);
     border-bottom: 2px solid #444;
     -webkit-transition: all 0.4s ease-in-out 0s;
     -moz-transition: all 0.4s ease-in-out 0s;
