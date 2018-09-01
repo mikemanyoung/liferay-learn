@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 470 330">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Front_End_2);
+      }
+
+      .cls-2, .cls-5, .cls-7, .cls-9 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #0b63ce;
+      }
+
+      .cls-2, .cls-5, .cls-7 {
+        stroke-width: 10px;
+      }
+
+      .cls-3 {
+        fill: #0b63ce;
+      }
+
+      .cls-4 {
+        fill: #fdcc4a;
+      }
+
+      .cls-5, .cls-7 {
+        stroke: #fdcc4a;
+      }
+
+      .cls-6 {
+        fill: #0ba7ce;
+      }
+
+      .cls-7 {
+        stroke-linecap: round;
+      }
+
+      .cls-8 {
+        stroke: none;
+      }
+    </style>
+    <clipPath id="clip-Front_End_2">
+      <rect width="470" height="330"/>
+    </clipPath>
+  </defs>
+  <g id="Front_End_2" data-name="Front End – 2" class="cls-1">
+    <g id="Group_652" data-name="Group 652" transform="translate(-36 19.5)">
+      <g id="Rectangle_127" data-name="Rectangle 127" class="cls-2" transform="translate(146 58.5)">
+        <rect class="cls-8" width="250.617" height="175" rx="5"/>
+        <rect class="cls-9" x="5" y="5" width="240.617" height="165"/>
+      </g>
+      <line id="Line_17" data-name="Line 17" class="cls-2" x2="244.856" transform="translate(148.881 97.029)"/>
+      <rect id="Rectangle_128" data-name="Rectangle 128" class="cls-3" width="100.823" height="7.202" rx="3.601" transform="translate(271.309 117.193)"/>
+      <rect id="Rectangle_129" data-name="Rectangle 129" class="cls-4" width="100.823" height="7.202" rx="3.601" transform="translate(271.309 138.798)"/>
+      <rect id="Rectangle_130" data-name="Rectangle 130" class="cls-3" width="100.823" height="7.202" rx="3.601" transform="translate(271.309 160.403)"/>
+      <rect id="Rectangle_131" data-name="Rectangle 131" class="cls-3" width="100.823" height="7.202" rx="3.601" transform="translate(271.309 203.613)"/>
+      <rect id="Rectangle_132" data-name="Rectangle 132" class="cls-4" width="100.823" height="7.202" rx="3.601" transform="translate(271.309 182.008)"/>
+      <g id="Rectangle_133" data-name="Rectangle 133" class="cls-5" transform="translate(161.844 117.193)">
+        <rect class="cls-8" width="95.062" height="72.016" rx="5"/>
+        <rect class="cls-9" x="5" y="5" width="85.062" height="62.016"/>
+      </g>
+      <line id="Line_18" data-name="Line 18" class="cls-2" x2="244.856" transform="translate(148.881 97.029)"/>
+      <rect id="Rectangle_141" data-name="Rectangle 141" class="cls-6" width="86.42" height="7.202" rx="3.601" transform="translate(285.712 76.144)"/>
+      <path id="Path_1615" data-name="Path 1615" class="cls-7" d="M5108,1772.24l27.692-27.692,16.26,16.26" transform="translate(-4931.753 -1594.553)"/>
+      <path id="Path_1616" data-name="Path 1616" class="cls-7" d="M5160,1747.4l14.4-14.4,19.668,19.668" transform="translate(-4949.905 -1591.321)"/>
+      <ellipse id="Ellipse_114" data-name="Ellipse 114" class="cls-4" cx="10.802" cy="10.802" rx="10.802" ry="10.802" transform="translate(174.807 128.716)"/>
+      <circle id="Ellipse_115" data-name="Ellipse 115" class="cls-6" cx="5.401" cy="5.401" r="5.401" transform="translate(161.844 73.984)"/>
+      <circle id="Ellipse_116" data-name="Ellipse 116" class="cls-6" cx="5.401" cy="5.401" r="5.401" transform="translate(183.449 73.984)"/>
+      <circle id="Ellipse_117" data-name="Ellipse 117" class="cls-6" cx="5.401" cy="5.401" r="5.401" transform="translate(205.053 73.984)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 470 330">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Fundamental_3);
+      }
+
+      .cls-2, .cls-5, .cls-7 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #0b63ce;
+      }
+
+      .cls-2, .cls-5 {
+        stroke-width: 10px;
+      }
+
+      .cls-3 {
+        fill: #0ba7ce;
+      }
+
+      .cls-4 {
+        fill: #0b63ce;
+        fill-rule: evenodd;
+      }
+
+      .cls-5 {
+        stroke: #fdcc4a;
+      }
+
+      .cls-6 {
+        stroke: none;
+      }
+    </style>
+    <clipPath id="clip-Fundamental_3">
+      <rect width="470" height="330"/>
+    </clipPath>
+  </defs>
+  <g id="Fundamental_3" data-name="Fundamental – 3" class="cls-1">
+    <g id="Group_655" data-name="Group 655" transform="translate(-36 19.5)">
+      <g id="Rectangle_264" data-name="Rectangle 264" class="cls-2" transform="translate(146 58.5)">
+        <rect class="cls-6" width="250.617" height="175" rx="5"/>
+        <rect class="cls-7" x="5" y="5" width="240.617" height="165"/>
+      </g>
+      <circle id="Ellipse_127" data-name="Ellipse 127" class="cls-3" cx="5.401" cy="5.401" r="5.401" transform="translate(161.844 73.984)"/>
+      <circle id="Ellipse_128" data-name="Ellipse 128" class="cls-3" cx="5.401" cy="5.401" r="5.401" transform="translate(183.449 73.984)"/>
+      <circle id="Ellipse_129" data-name="Ellipse 129" class="cls-3" cx="5.401" cy="5.401" r="5.401" transform="translate(205.054 73.984)"/>
+      <line id="Line_19" data-name="Line 19" class="cls-2" x2="244.856" transform="translate(148.881 97.029)"/>
+      <rect id="Rectangle_265" data-name="Rectangle 265" class="cls-3" width="86.42" height="7.202" rx="3.601" transform="translate(285.712 76.144)"/>
+      <path id="liferay-icon-blue" class="cls-4" d="M23,27.268A4.268,4.268,0,0,1,27.268,23H76.346a4.268,4.268,0,0,1,4.268,4.268V76.346a4.268,4.268,0,0,1-4.268,4.268H27.268A4.268,4.268,0,0,1,23,76.346ZM31.535,32.6A1.067,1.067,0,0,1,32.6,31.535H39A1.067,1.067,0,0,1,40.071,32.6V39A1.067,1.067,0,0,1,39,40.071H32.6A1.067,1.067,0,0,1,31.535,39Zm11.736-1.067A1.067,1.067,0,0,0,42.2,32.6V39a1.067,1.067,0,0,0,1.067,1.067h6.4A1.067,1.067,0,0,0,50.74,39V32.6a1.067,1.067,0,0,0-1.067-1.067Zm9.6,1.067a1.067,1.067,0,0,1,1.067-1.067h6.4A1.067,1.067,0,0,1,61.409,32.6V39a1.067,1.067,0,0,1-1.067,1.067h-6.4A1.067,1.067,0,0,1,52.874,39ZM32.6,42.2a1.067,1.067,0,0,0-1.067,1.067v6.4A1.067,1.067,0,0,0,32.6,50.74H39a1.067,1.067,0,0,0,1.067-1.067v-6.4A1.067,1.067,0,0,0,39,42.2Zm9.6,1.067A1.067,1.067,0,0,1,43.271,42.2h6.4a1.067,1.067,0,0,1,1.067,1.067v6.4a1.067,1.067,0,0,1-1.067,1.067h-6.4A1.067,1.067,0,0,1,42.2,49.673ZM64.61,42.2a1.067,1.067,0,0,0-1.067,1.067v6.4A1.067,1.067,0,0,0,64.61,50.74h6.4a1.067,1.067,0,0,0,1.067-1.067v-6.4A1.067,1.067,0,0,0,71.011,42.2ZM31.535,53.94A1.067,1.067,0,0,1,32.6,52.874H39a1.067,1.067,0,0,1,1.067,1.067v6.4A1.067,1.067,0,0,1,39,61.409H32.6a1.067,1.067,0,0,1-1.067-1.067ZM53.94,52.874a1.067,1.067,0,0,0-1.067,1.067v6.4a1.067,1.067,0,0,0,1.067,1.067h6.4a1.067,1.067,0,0,0,1.067-1.067v-6.4a1.067,1.067,0,0,0-1.067-1.067Zm9.6,1.067a1.067,1.067,0,0,1,1.067-1.067h6.4a1.067,1.067,0,0,1,1.067,1.067v6.4a1.067,1.067,0,0,1-1.067,1.067h-6.4a1.067,1.067,0,0,1-1.067-1.067Zm-20.271,9.6A1.067,1.067,0,0,0,42.2,64.61v6.4a1.067,1.067,0,0,0,1.067,1.067h6.4a1.067,1.067,0,0,0,1.067-1.067v-6.4a1.067,1.067,0,0,0-1.067-1.067Zm9.6,1.067a1.067,1.067,0,0,1,1.067-1.067h6.4a1.067,1.067,0,0,1,1.067,1.067v6.4a1.067,1.067,0,0,1-1.067,1.067h-6.4a1.067,1.067,0,0,1-1.067-1.067ZM64.61,63.543a1.067,1.067,0,0,0-1.067,1.067v6.4a1.067,1.067,0,0,0,1.067,1.067h6.4a1.067,1.067,0,0,0,1.067-1.067v-6.4a1.067,1.067,0,0,0-1.067-1.067Z" transform="translate(147.486 94.193)"/>
+      <g id="Rectangle_266" data-name="Rectangle 266" class="cls-5" transform="translate(242.502 117.193)">
+        <rect class="cls-6" width="57.613" height="57.613" rx="5"/>
+        <rect class="cls-7" x="5" y="5" width="47.613" height="47.613"/>
+      </g>
+      <g id="Rectangle_267" data-name="Rectangle 267" class="cls-5" transform="translate(314.519 117.193)">
+        <rect class="cls-6" width="57.613" height="57.613" rx="5"/>
+        <rect class="cls-7" x="5" y="5" width="47.613" height="47.613"/>
+      </g>
+      <rect id="Rectangle_268" data-name="Rectangle 268" class="cls-3" width="201.646" height="7.202" rx="3.601" transform="translate(170.486 210.815)"/>
+      <rect id="Rectangle_269" data-name="Rectangle 269" class="cls-3" width="201.646" height="7.202" rx="3.601" transform="translate(170.486 189.21)"/>
+    </g>
+  </g>
+</svg>

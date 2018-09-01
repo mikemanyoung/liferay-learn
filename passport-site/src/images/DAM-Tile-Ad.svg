@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 470 330">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Dam_2);
+      }
+
+      .cls-2 {
+        fill: #0b63ce;
+      }
+
+      .cls-3 {
+        fill: #0ba7ce;
+      }
+    </style>
+    <clipPath id="clip-Dam_2">
+      <rect width="470" height="330"/>
+    </clipPath>
+  </defs>
+  <g id="Dam_2" data-name="Dam – 2" class="cls-1">
+    <g id="Group_705" data-name="Group 705" transform="translate(27 33)">
+      <g id="Dam_1_" transform="translate(135 45)">
+        <g id="forms-3_1_" transform="translate(0)">
+          <g id="Group_339-3_1_">
+            <g id="Group_338-3_1_">
+              <path id="Path_1347-3_1_" class="cls-2" d="M-55.277,3.365l-42.788-42.34A3.676,3.676,0,0,0-100.582-40h-81.874A17.443,17.443,0,0,0-200-22.639V117.639A17.443,17.443,0,0,0-182.456,135H-71.711a17.443,17.443,0,0,0,17.544-17.361V5.856A3.379,3.379,0,0,0-55.277,3.365ZM-96.954-27.84-66.529,2.267H-86.665A10.215,10.215,0,0,1-96.954-7.915h0Zm35.533,145.479a10.215,10.215,0,0,1-10.29,10.182H-182.456a10.215,10.215,0,0,1-10.29-10.182V-22.639a10.215,10.215,0,0,1,10.29-10.182h78.247V-7.915A17.443,17.443,0,0,0-86.665,9.445h25.243V117.639Z" transform="translate(200 40)"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <path id="Path_1355" data-name="Path 1355" class="cls-3" d="M55.88,29.229,6.209.586A4.154,4.154,0,0,0,0,4.145v57.37a4.127,4.127,0,0,0,6.209,3.56L55.88,36.431A4.189,4.189,0,0,0,55.88,29.229Z" transform="translate(178.75 99.653)"/>
+    </g>
+  </g>
+</svg>
