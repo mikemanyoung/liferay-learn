@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 470 330">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Building_Engaging_Web_3);
+      }
+
+      .cls-2, .cls-3, .cls-7 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #0b63ce;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-width: 10px;
+      }
+
+      .cls-3 {
+        stroke: #0ba7ce;
+      }
+
+      .cls-4 {
+        fill: #0ba7ce;
+      }
+
+      .cls-5 {
+        fill: #0b63ce;
+      }
+
+      .cls-6 {
+        stroke: none;
+      }
+    </style>
+    <clipPath id="clip-Building_Engaging_Web_3">
+      <rect width="470" height="330"/>
+    </clipPath>
+  </defs>
+  <g id="Building_Engaging_Web_3" data-name="Building Engaging Web – 3" class="cls-1">
+    <g id="Group_704" data-name="Group 704" transform="translate(-40.875 25)">
+      <g id="Rectangle_104" data-name="Rectangle 104" class="cls-2" transform="translate(164.875 40)">
+        <rect class="cls-6" width="85.714" height="200" rx="5"/>
+        <rect class="cls-7" x="5" y="5" width="75.714" height="190"/>
+      </g>
+      <g id="Rectangle_105" data-name="Rectangle 105" class="cls-3" transform="translate(257.911 111.429) rotate(-90)">
+        <rect class="cls-6" width="71.429" height="127.571" rx="5"/>
+        <rect class="cls-7" x="5" y="5" width="61.429" height="117.571"/>
+      </g>
+      <rect id="Rectangle_106" data-name="Rectangle 106" class="cls-4" width="57.143" height="57.143" rx="5" transform="translate(257.911 240) rotate(-90)"/>
+      <rect id="Rectangle_107" data-name="Rectangle 107" class="cls-5" width="57.143" height="57.143" rx="5" transform="translate(329.339 240) rotate(-90)"/>
+      <rect id="Rectangle_108" data-name="Rectangle 108" class="cls-4" width="57.143" height="7.143" rx="3.571" transform="translate(179.155 164.121)"/>
+      <rect id="Rectangle_200" data-name="Rectangle 200" class="cls-4" width="57.143" height="7.143" rx="3.571" transform="translate(179.155 142.692)"/>
+      <rect id="Rectangle_198" data-name="Rectangle 198" class="cls-5" width="28.571" height="7.143" rx="3.571" transform="translate(324.964 61.429) rotate(90)"/>
+      <rect id="Rectangle_199" data-name="Rectangle 199" class="cls-5" width="28.571" height="7.143" rx="3.571" transform="translate(307.107 72.143)"/>
+      <rect id="Rectangle_109" data-name="Rectangle 109" class="cls-5" width="128.571" height="7.143" rx="3.571" transform="translate(257.911 120.714)"/>
+      <rect id="Rectangle_110" data-name="Rectangle 110" class="cls-4" width="57.143" height="7.143" rx="3.571" transform="translate(179.155 185.852)"/>
+      <rect id="Rectangle_111" data-name="Rectangle 111" class="cls-5" width="128.571" height="7.143" rx="3.571" transform="translate(257.911 142.445)"/>
+      <rect id="Rectangle_112" data-name="Rectangle 112" class="cls-4" width="57.143" height="7.143" rx="3.571" transform="translate(179.155 207.582)"/>
+      <rect id="Rectangle_113" data-name="Rectangle 113" class="cls-5" width="128.571" height="7.143" rx="3.571" transform="translate(257.911 164.176)"/>
+    </g>
+  </g>
+</svg>
