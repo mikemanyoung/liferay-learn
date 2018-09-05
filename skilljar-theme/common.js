@@ -107,6 +107,10 @@ function cuePassportPurchase() {
       $( "<p>Don't have an access code? Purchase a Liferay University Passport by contacting <a href='mailto:sales@liferay.com'>sales@liferay.com!</a></p>" ).insertAfter( ".sj-text-continue" );
     }
   });
+
+  $('#terms-conditions').click(function() {
+    popup('https://web.liferay.com/legal/doc/STA/1101806_GL');
+  });
 }
 
 function popup(url) {
