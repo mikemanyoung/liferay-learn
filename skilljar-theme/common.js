@@ -27,21 +27,6 @@ function cueCoursePurchase() {
   })
 }
 
-function cueDisablePricing() {
-  if ($('#total-price').length <= 0) {
-    return;
-  }
-
-  $(".sj-text-price").css("display", "none");
-  $(".sj-text-price").next().css("display", "none");
-
-  $(".sj-text-subtotal").css("display", "none");
-  $("#subtotal").css("display", "none");
-
-  $(".sj-text-total").css('display', "none");
-  $("#total-price").css("display", "none");
-}
-
 function cueDropShadow() {
 
   var element = $('#header');
@@ -83,6 +68,43 @@ function cueHighlightTiles() {
 
   for (j = 0; j < courses.length; ++j) {
     courses[j].style.borderBottom = "4px solid #FDCC4A";
+  }
+}
+
+function cueDisablePricing() {
+  if ($('#total-price').length <= 0) {
+    return;
+  }
+
+  $(".sj-text-price").css("display", "none");
+  $(".sj-text-price").next().css("display", "none");
+
+  $(".sj-text-subtotal").css("display", "none");
+  $("#subtotal").css("display", "none");
+
+  $(".sj-text-total").css('display', "none");
+  $("#total-price").css("display", "none");
+}
+
+function cueExitFullScreenVideo() {
+  if ($('.sj-page-lesson')) {
+    $(document).ajaxComplete(function() {
+      wistiaEmbed.bind("end", function() {
+        if (document.fullscreenElement || document.webkitFullscreenElement ||
+            document.mozFullScreenElement || document.msFullscreenElement) {
+
+          if (document.exitFullscreen) {
+              document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) {
+              document.webkitExitFullscreen();
+          } else if (document.mozCancelFullScreen) {
+              document.mozCancelFullScreen();
+          } else if (document.msExitFullscreen) {
+              document.msExitFullscreen();
+          }
+        }
+      });
+    });
   }
 }
 
