@@ -27,6 +27,21 @@ function cueCoursePurchase() {
   })
 }
 
+function cueDisablePricing() {
+  if ($('#total-price').length <= 0) {
+    return;
+  }
+
+  $(".sj-text-price").css("display", "none");
+  $(".sj-text-price").next().css("display", "none");
+
+  $(".sj-text-subtotal").css("display", "none");
+  $("#subtotal").css("display", "none");
+
+  $(".sj-text-total").css('display', "none");
+  $("#total-price").css("display", "none");
+}
+
 function cueDropShadow() {
 
   var element = $('#header');
@@ -76,7 +91,7 @@ function cuePassportOwner() {
 }
 
 function cuePassportPurchase() {
-  if ($('#id_domain_access_signup_flow') === null) {
+  if ($('#id_domain_access_signup_flow') <= 0) {
     return;
   }
 
