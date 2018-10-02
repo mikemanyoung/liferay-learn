@@ -5,14 +5,6 @@ function cueCoursePurchase() {
     return;
   }
 
-  $.getJSON('https://ipapi.co/json', function(data) {
-    if (data.country !== 'US') {
-      $(".purchase-button").attr("disabled", "disabled");
-      $("<p>Please contact <a href='mailto:sales@liferay.com'>sales@liferay.com</a> to purchase this course.</p>").insertAfter(".purchase-button");
-      return;
-    }      
-  });
-
   $('.purchase-button').click(function(e) {
     e.preventDefault();
     $('#terms-modal').show();
@@ -134,20 +126,6 @@ function cuePassportPurchase() {
   $('#login-content .sj-text-continue').attr('value','Agree and Continue'); 
 
   $("<div class='signup-hero'></div>").insertBefore('#login-content');
-
-  // regional pricing
-
-  $.getJSON('https://ipapi.co/json/', function(data) {
-
-    if (data.country !== 'US' ) {
-      $('label[for="id_domain_access_signup_flow_1"]').css('display','none');
-      $( "<p>Don't have an access code? Purchase a Liferay University Passport by contacting <a href='mailto:sales@liferay.com'>sales@liferay.com!</a></p>" ).insertAfter( ".sj-text-continue" );
-    }
-  });
-
-  $('#terms-conditions').click(function() {
-    popup('https://web.liferay.com/legal/doc/STA/1101806_GL');
-  });
 }
 
 function popup(url) {

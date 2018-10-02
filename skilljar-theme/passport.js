@@ -5,7 +5,6 @@ $(document).ready(function() {
   cueDisablePricing();
   cueExitFullScreenVideo();
   cueHighlightTiles();
-  cuePassportOwner();
 
   // passport specific code
 
