@@ -539,15 +539,6 @@
     var updateCurrencies = function(currencyCode) {
         $(".listPrice").html(currencies[currencyCode].listPrice);
         $(".promoPrice").html(currencies[currencyCode].promoPrice);
-
-        if (currencyCode == 'USD') {
-            $(".passportButton").show();
-            $(".passportLink").css('display', 'none');
-        } 
-        else {
-            $(".passportLink").show();
-            $(".passportButton").css('display', 'none');
-        }
     }
 
     var learnMore = function() {
