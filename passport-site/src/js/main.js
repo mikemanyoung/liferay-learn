@@ -537,8 +537,14 @@
     };
 
     var updateCurrencies = function(currencyCode) {
-        $(".listPrice").html(currencies[currencyCode].listPrice);
-        $(".promoPrice").html(currencies[currencyCode].promoPrice);
+        $("#bannerListPrice").html(currencies[currencyCode].listPrice);
+        $("#bannerPromoPrice").html(currencies[currencyCode].promoPrice);
+
+        $("#heroListPrice").html(currencies[currencyCode].listPrice);
+        $("#heroPromoPrice").html(currencies[currencyCode].promoPrice);
+
+        $("#footerListPrice").html(currencies[currencyCode].listPrice);
+        $("#footerPromoPrice").html(currencies[currencyCode].promoPrice);
     }
 
     var learnMore = function() {
