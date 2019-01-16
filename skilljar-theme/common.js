@@ -44,7 +44,7 @@ function cueDetailsPane() {
 
 function cueFooter() {
   $('#ep-footer').attr('id', 'lr-footer');
-  $('#lr-footer').html('© 2018 Liferay Inc. All Rights Reserved');
+  $('#lr-footer').html('© 2019 Liferay Inc. All Rights Reserved');
 }
 
 function cueHighlightTiles() {
