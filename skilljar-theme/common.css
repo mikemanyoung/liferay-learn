@@ -375,7 +375,7 @@ a.coursebox-container .sj-course-ribbon-wrapper .sj-course-ribbon-complete{
 
 .sj-page-curriculum .top-row-grey,
 .sj-page-detail .top-row-grey {
-    background-color: #f8f8f8;
+    background-color: #fff;
 }
 
 .dp-promo-image {
@@ -400,6 +400,9 @@ button.btn-sm,
   pointer-events: none;
 }
 
+.sj-page-curriculum .progress-bar {
+    background: #eef9ff;
+}
 
 
 /* Course Nav */
@@ -464,14 +467,6 @@ button.btn-sm,
     transition: background-color 300ms ease-out;
 }
 
-.sj-page-curriculum .progress-bar {
-
-    -webkit-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
-    -ms-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
-}
-
 .lesson-complete .title {
     text-decoration: none;
 }
@@ -509,6 +504,10 @@ ul.dp-curriculum .type-icon i.icon-video {
     color: #0B63CE;
 }
 
+#cp-content #curriculum-list .lesson-row:hover {
+    background-color: #eef9ff;
+    border-radius: 5px;
+}
 
 
 /* Video Page */
